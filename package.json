@@ -1,13 +1,8 @@
 {
-  "name": "hi-den-local-replica",
+  "name": "spt-heattech",
   "version": "1.0.0",
-  "description": "Local replica of hi-den.co.th corporate website",
-  "main": "server.js",
+  "description": "SPT corporate website",
   "scripts": {
-    "start": "node server.js"
-  },
-  "dependencies": {
-    "express": "^4.19.2",
-    "puppeteer-core": "^24.43.1"
+    "start": "node dev-server.js"
   }
 }
