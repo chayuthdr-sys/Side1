@@ -1,0 +1,8 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/หน้าแรก", "destination": "/index.html" },
+    { "source": "/บริการ", "destination": "/services.html" },
+    { "source": "/services", "destination": "/services.html" }
+  ]
+}
