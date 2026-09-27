@@ -1,0 +1,36 @@
+/*! Font Awesome & Glyphs replacement styles for Hi-Den */
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+.glyphicon-chevron-left:before { content: "‹"; font-size: 32px; font-weight: bold; }
+.glyphicon-chevron-right:before { content: "›"; font-size: 32px; font-weight: bold; }
+.fa-angle-down:before { content: "▼"; font-size: 10px; }
+.fa-phone:before { content: "📞"; }
+.fa-clock-o:before { content: "🕒"; }
+.fa-check:before { content: "✓"; font-weight: bold; }
+.fa-facebook:before { content: "f"; font-family: sans-serif; font-weight: bold; }
+.fa-line:before { content: "L"; font-family: sans-serif; font-weight: bold; }
+.fa-youtube:before { content: "▶"; }
+.fa-refresh:before { content: "↻"; font-size: 16px; font-weight: bold; }
+.fa-shield:before { content: "🛡"; }
+.fa-users:before { content: "👥"; }
+.fa-cogs:before { content: "⚙"; }
+.fa-headphones:before { content: "🎧"; }
+.fa-comments:before { content: "💬"; }
