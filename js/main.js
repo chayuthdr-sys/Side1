@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initLanguageSwitcher();
   initProductFilter();
+  initProductModal();
 });
 
 /* Hero Slider Controller */
@@ -193,6 +194,273 @@ function initProductFilter() {
 
   // Default to all
   filterCategory('all');
+}
+
+/* Products Database for Interactive Modal */
+const PRODUCTS_DATA = {
+  thermocouple: {
+    id: 'thermocouple',
+    title: 'Thermocouple',
+    subtitle: 'เซนเซอร์วัดอุณหภูมิเทอร์โมคับเปิ้ล',
+    category: 'หัววัดอุณหภูมิและเซนเซอร์',
+    image: 'assets/images/image-28.png',
+    desc: 'เซนเซอร์วัดอุณหภูมิที่ทำจากโลหะต่างชนิดกัน 2 เส้น ประกอบด้วยขั้วบวกและขั้วลบ ใช้หลักการเปลี่ยนแปลงค่าอุณหภูมิเป็นค่าความต่างศักย์',
+    specs: [
+      { name: 'ชนิด Type', val: 'K, J, R, S, T, E' },
+      { name: 'วัสดุ', val: 'สแตนเลส SUS304, SUS316, SUS310S, Incoloy600, Incoloy610' },
+      { name: 'ย่านวัดอุณหภูมิ', val: '-40 ถึง 1600 องศาเซลเซียส' }
+    ]
+  },
+  rtd: {
+    id: 'rtd',
+    title: 'RTD PT-100',
+    subtitle: 'หัววัดอุณหภูมิความละเอียดสูง PT-100',
+    category: 'หัววัดอุณหภูมิและเซนเซอร์',
+    image: 'assets/images/image-28.png',
+    desc: 'อุปกรณ์วัดอุณหภูมิที่มีค่าความต้านทาน 100 โอห์มที่ 0 องศาเซลเซียส โครงสร้างหลักเป็นขดลวดแพลทินัมจึงให้ความแม่นยำและเสถียรสูง เหมาะกับงานที่ต้องการควบคุมคุณภาพในอุตสาหกรรม',
+    specs: [
+      { name: 'วัสดุ', val: 'สแตนเลส SUS304, SUS316' },
+      { name: 'ย่านวัดอุณหภูมิ', val: '-200 ถึง 500 องศาเซลเซียส' }
+    ]
+  },
+  'band-heater': {
+    id: 'band-heater',
+    title: 'Band Heater',
+    subtitle: 'ฮีตเตอร์รัดท่อ',
+    category: 'ฮีตเตอร์อุตสาหกรรม',
+    image: 'assets/images/cropped-image-19-e1752382785519-1.png',
+    desc: 'เป็นอุปกรณ์ให้ความร้อนแบบทรงกระบอก โดยใช้หลักการนำความร้อนผ่านการรัดรอบท่อหรือรอบถังทรงกระบอก',
+    specs: [
+      { name: 'วัสดุ', val: 'สแตนเลส, ซิ้งค์, ทองเหลือง' },
+      { name: 'ลักษณะขั้วต่อไฟ', val: 'ออกขั้วสาย, ออกขั้วปลั๊ก, ออกขั้วเต๋า, ออกขั้วน็อต' },
+      { name: 'ผลิตแรงดันไฟฟ้า', val: '55 VDC/AC – 420 VDC/AC' }
+    ]
+  },
+  'ceramic-band-heater': {
+    id: 'ceramic-band-heater',
+    title: 'Ceramic Band Heater',
+    subtitle: 'ฮีตเตอร์รัดท่อแบบเซรามิค',
+    category: 'ฮีตเตอร์อุตสาหกรรม',
+    image: 'assets/images/cropped-image-19-e1752382785519-1.png',
+    desc: 'คือ อุปกรณ์ให้ความร้อนในอุณหภูมิปานกลางถึงอุณหภูมิสูงแก่ชิ้นงานที่มีลักษณะเป็นทรงกระบอก เช่น ท่อ ถัง หรือหัวฉีดเครื่องจักร โดยใช้หลักการนำความร้อน',
+    specs: [
+      { name: 'วัสดุ', val: 'สแตนเลส พร้อมฉนวนเซรามิคทนความร้อนสูง' },
+      { name: 'ลักษณะขั้วต่อไฟ', val: 'ออกขั้วสาย, ออกขั้วปลั๊ก, ออกขั้วเต๋า, ออกขั้วน็อต' },
+      { name: 'ผลิตแรงดันไฟฟ้า', val: '55 VDC/AC – 420 VDC/AC' }
+    ]
+  },
+  'immersion-heater': {
+    id: 'immersion-heater',
+    title: 'Immersion Heater',
+    subtitle: 'ฮีตเตอร์ต้มน้ำ',
+    category: 'ฮีตเตอร์อุตสาหกรรม',
+    image: 'assets/images/cropped-image-22-1.png',
+    desc: 'อุปกรณ์ทำความร้อนไฟฟ้าที่ใช้สำหรับจุ่มลงไปในของเหลวโดยตรง เช่น น้ำ น้ำประปา น้ำมัน หรือสารเคมีบางชนิด เพื่อเปลี่ยนพลังงานไฟฟ้าเป็นความร้อนและถ่ายเทเข้าสู่ของเหลวนั้นๆ ได้อย่างรวดเร็วและสม่ำเสมอ',
+    specs: [
+      { name: 'วัสดุ', val: 'สแตนเลส SUS304, SUS316, SUS310S, Incoloy840, Incoloy800' },
+      { name: 'ผลิตแรงดันไฟฟ้า', val: '55 VDC/AC – 420 VDC/AC' },
+      { name: 'รูปแบบท่อ U', val: '1U, 2U, 3U, 6U, 9U, 12U, 15U, 18U' },
+      { name: 'การต่อสะพานไฟ', val: 'แบบสตาร์ 220 หรือ 380 โวลต์ และ แบบเดลต้า 380 โวลต์' }
+    ]
+  },
+  'cartridge-heater': {
+    id: 'cartridge-heater',
+    title: 'Cartridge Heater',
+    subtitle: 'ฮีตเตอร์แท่ง',
+    category: 'ฮีตเตอร์อุตสาหกรรม',
+    image: 'assets/images/spt-banner-products-4k.png',
+    desc: 'อุปกรณ์ให้ความร้อนแก่ชิ้นงานโดยใช้หลักการนำความร้อน แปลงพลังงานไฟฟ้าเป็นความร้อนผ่านขดลวดนิโครมที่อยู่ภายในปลอกโลหะทรงกระบอก',
+    specs: [
+      { name: 'วัสดุปลอก', val: 'สแตนเลส SUS304, SUS316L หรือ Incoloy' },
+      { name: 'ผลิตแรงดันไฟฟ้า', val: '55 VDC/AC – 420 VDC/AC' }
+    ]
+  },
+  'finned-heater': {
+    id: 'finned-heater',
+    title: 'Finned Heater',
+    subtitle: 'ฮีตเตอร์ครีบ',
+    category: 'ฮีตเตอร์อุตสาหกรรม',
+    image: 'assets/images/cropped-image-22-1.png',
+    desc: 'คืออุปกรณ์ให้ความร้อนในงานอุตสาหกรรมที่พัฒนามาจากฮีตเตอร์ท่อกลม โดยมีการติดตั้งแผ่นครีบเพิ่มรอบตัวท่อ เพื่อช่วยเพิ่มพื้นที่ผิวและระบายความร้อนสู่อากาศได้รวดเร็วและสม่ำเสมอยิ่งขึ้นและมีอายุการใช้งานที่ยาวนานขึ้น ซึ่งสามารถผลิตได้หลากหลายรูปแบบ ทั้งแบบตัวไอ ดัดเป็นตัวยู ดัดเป็นตัวดับบลิว รวมถึงดัดเป็นรูปทรงต่างๆ ตามต้องการ',
+    specs: [
+      { name: 'วัสดุ', val: 'สแตนเลส SUS304, SUS316, SUS310S, Incoloy840, Incoloy800' },
+      { name: 'ผลิตแรงดันไฟฟ้า', val: '55 VDC/AC – 420 VDC/AC' },
+      { name: 'การต่อสะพานไฟ', val: 'แบบสตาร์ 220 หรือ 380 โวลต์ และ แบบเดลต้า 380 โวลต์' }
+    ]
+  },
+  'tubular-heater': {
+    id: 'tubular-heater',
+    title: 'Tubular Heater',
+    subtitle: 'ฮีตเตอร์ท่อกลม',
+    category: 'ฮีตเตอร์อุตสาหกรรม',
+    image: 'assets/images/cropped-image-22-1.png',
+    desc: 'อุปกรณ์ให้ความร้อนในงานอุตสาหกรรม และงานระบบต่างๆ ที่เปลี่ยนพลังงานไฟฟ้าเป็นพลังงานความร้อน โดยมีลักษณะเป็นท่อโลหะรูปทรงกระบอก สามารถดัดโค้งงอเป็นรูปทรงต่างๆ ได้ตามความต้องการ',
+    specs: [
+      { name: 'วัสดุ', val: 'สแตนเลส SUS304, SUS316L หรือ Incoloy' },
+      { name: 'ขนาดท่อ', val: '8 mm, 11 mm, 14 mm' },
+      { name: 'กำลังไฟฟ้า', val: '110 VAC – 420 VAC' }
+    ]
+  },
+  'level-switch': {
+    id: 'level-switch',
+    title: 'Level Switch',
+    subtitle: 'ลูกลอย Float Switch',
+    category: 'ลูกลอยวัดระดับของเหลว',
+    image: 'assets/images/cropped-image-20-1.png',
+    desc: 'อุปกรณ์ตรวจจับระดับของเหลว เช่น น้ำหรือน้ำมัน ภายในถังเก็บหรือบ่อน้ำ เพื่อทำหน้าที่เปิดหรือปิดวงจรไฟฟ้าอัตโนมัติ โดยใช้ระดับน้ำเป็นตัวกำหนดการทำงาน เพื่อควบคุมปั๊มน้ำ วาล์ว หรือระบบสัญญาณเตือนภัย',
+    specs: [
+      { name: 'วัสดุโครงสร้าง', val: 'สแตนเลส SUS304, SUS316 Food Grade' },
+      { name: 'ระบบการทำงาน', val: 'สวิตช์ลูกลอยแม่เหล็กไฟฟ้าความแม่นยำสูง' },
+      { name: 'การนำไปใช้งาน', val: 'ควบคุมปั๊มน้ำ วาล์ว และระบบสัญญาณเตือนภัยระดับของเหลว' }
+    ]
+  },
+  'infrared-heater': {
+    id: 'infrared-heater',
+    title: 'Infrared Heater',
+    subtitle: 'ฮีตเตอร์อินฟราเรด',
+    category: 'ฮีตเตอร์อุตสาหกรรม',
+    image: 'assets/images/spt-banner-products-4k.png',
+    desc: 'อุปกรณ์ที่เปลี่ยนพลังงานไฟฟ้าให้กลายเป็นพลังงานความร้อนในรูปของรังสีอินฟราเรด ซึ่งเป็นคลื่นแม่เหล็กไฟฟ้าชนิดหนึ่ง',
+    specs: [
+      { name: 'ประเภทความร้อน', val: 'รังสีความร้อนอินฟราเรด คลื่นแม่เหล็กไฟฟ้า' },
+      { name: 'การนำไปใช้งาน', val: 'งานอบแห้งสี อบไล่ความชื้น งานอบชิ้นส่วนอุตสาหกรรม' }
+    ],
+    features: [
+      'ประหยัดพลังงานความร้อน',
+      'ให้ความร้อนได้รวดเร็ว',
+      'ใช้ในงานอบแห้งต่างๆ'
+    ]
+  },
+  'aluminium-heater': {
+    id: 'aluminium-heater',
+    title: 'Aluminium Heater',
+    subtitle: 'ฮีตเตอร์หล่ออะลูมิเนียม',
+    category: 'ฮีตเตอร์อุตสาหกรรม',
+    image: 'assets/images/cropped-image-19-e1752382785519-1.png',
+    desc: 'อุปกรณ์ทำความร้อนประเภทหนึ่ง ที่นำเอาขดลวดหรือท่อฮีตเตอร์มาฝังหรือหลอมรวมเป็นเนื้อเดียวกับอะลูมิเนียมด้วยกระบวนการหล่อ ออกมาเป็นรูปทรงตามต้องการ',
+    specs: [
+      { name: 'วัสดุเนื้อหล่อ', val: 'อะลูมิเนียมเกรดหล่อขึ้นรูป ทนความร้อนสูง' },
+      { name: 'โครงสร้างภายใน', val: 'ฝังท่อฮีตเตอร์ท่อกลมเนื้อสแตนเลส พร้อมท่อน้ำหล่อเย็นในตัว' }
+    ],
+    features: [
+      'การกระจายความร้อนสม่ำเสมอ: ตัวอะลูมิเนียมช่วยนำและกระจายความร้อนออกไปได้อย่างรวดเร็วและทั่วถึงทุกพื้นผิว',
+      'ความทนทานสูง: แข็งแรงทนทานกว่าฮีตเตอร์ทั่วไป เพราะมีเนื้ออะลูมิเนียมห่อหุ้มช่วยป้องกันการกระแทกและยืดอายุการใช้งาน',
+      'รับวัตต์และอุณหภูมิได้สูง: สามารถทนกำลังวัตต์และอุณหภูมิสูงได้ดี และอาจมีการออกแบบให้ทำท่อน้ำสำหรับระบายความร้อนในตัวเดียวกันได้',
+      'สั่งทำตามแบบได้: สามารถหล่อขึ้นรูปได้หลายรูปแบบ เช่น ทรงกลม ทรงเหลี่ยม หรือตามลักษณะแม่พิมพ์และเครื่องจักรที่ต้องการใช้งาน'
+    ]
+  },
+  'coil-heater': {
+    id: 'coil-heater',
+    title: 'Coil Heater',
+    subtitle: 'ฮีตเตอร์คอยล์',
+    category: 'ฮีตเตอร์อุตสาหกรรม',
+    image: 'assets/images/spt-banner-products-4k.png',
+    desc: 'อุปกรณ์ทำความร้อนประเภทหนึ่งที่ใช้ลวดความต้านทานไฟฟ้า เช่น ลวดนิโครม มาขดเป็นเกลียวหรือรูปทรงคอยล์ เหมาะกับงานที่ต้องการลมร้อนสูง',
+    specs: [
+      { name: 'วัสดุลวดนำความร้อน', val: 'ลวดความต้านทานนิโครมคุณภาพสูง' },
+      { name: 'ลักษณะทางกายภาพ', val: 'ขดเป็นเกลียวหรือรูปทรงคอยล์' },
+      { name: 'การนำไปใช้งาน', val: 'เหมาะกับงานที่ต้องการลมร้อนสูง และระบบเป่าความร้อน' }
+    ]
+  }
+};
+
+/* Product Detail Interactive Modal Controller */
+function initProductModal() {
+  const modal = document.getElementById('productModal');
+  const closeBtn = document.getElementById('closeProductModal');
+  const productCards = document.querySelectorAll('.product-item-wrapper[data-product-id]');
+
+  if (!modal || !productCards.length) return;
+
+  const modalImg = document.getElementById('modalProductImg');
+  const modalTitle = document.getElementById('modalProductTitle');
+  const modalSubtitle = document.getElementById('modalProductSubtitle');
+  const modalCategory = document.getElementById('modalProductCategory');
+  const modalDesc = document.getElementById('modalProductDesc');
+  const modalSpecs = document.getElementById('modalProductSpecs');
+  const modalFeatures = document.getElementById('modalProductFeatures');
+
+  function openModal(productId) {
+    const data = PRODUCTS_DATA[productId];
+    if (!data) return;
+
+    if (modalImg) {
+      modalImg.src = data.image;
+      modalImg.alt = data.title + ' ' + data.subtitle;
+    }
+    if (modalTitle) modalTitle.innerText = data.title;
+    if (modalSubtitle) modalSubtitle.innerText = data.subtitle;
+    if (modalCategory) modalCategory.innerText = data.category;
+    if (modalDesc) modalDesc.innerText = data.desc;
+
+    // Render Specs Table
+    if (modalSpecs) {
+      if (data.specs && data.specs.length) {
+        let tableHtml = '<table class="product-modal-spec-table"><tbody>';
+        data.specs.forEach(spec => {
+          tableHtml += `<tr><td class="spec-name">${spec.name}</td><td class="spec-val">${spec.val}</td></tr>`;
+        });
+        tableHtml += '</tbody></table>';
+        modalSpecs.innerHTML = tableHtml;
+        modalSpecs.style.display = 'block';
+      } else {
+        modalSpecs.innerHTML = '';
+        modalSpecs.style.display = 'none';
+      }
+    }
+
+    // Render Key Features / Highlights if any
+    if (modalFeatures) {
+      if (data.features && data.features.length) {
+        let featHtml = '<h4>จุดเด่นและคุณสมบัติพิเศษ</h4><ul>';
+        data.features.forEach(feat => {
+          featHtml += `<li><span>${feat}</span></li>`;
+        });
+        featHtml += '</ul>';
+        modalFeatures.innerHTML = featHtml;
+        modalFeatures.style.display = 'block';
+      } else {
+        modalFeatures.innerHTML = '';
+        modalFeatures.style.display = 'none';
+      }
+    }
+
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+  }
+
+  function closeModal() {
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+  }
+
+  productCards.forEach(card => {
+    card.addEventListener('click', (e) => {
+      e.preventDefault();
+      const productId = card.getAttribute('data-product-id');
+      if (productId) {
+        openModal(productId);
+      }
+    });
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeModal);
+  }
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+      closeModal();
+    }
+  });
 }
 
 
