@@ -2,7 +2,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   initHeroSlider();
-  initPromoSlider();
   initNavigation();
   initLanguageSwitcher();
 });
@@ -139,70 +138,4 @@ function initLanguageSwitcher() {
   });
 }
 
-/* Hiden-Style Promotions Slider Controller */
-function initPromoSlider() {
-  const slider = document.getElementById('hidenPromoSlider');
-  if (!slider) return;
 
-  const slides = slider.querySelectorAll('.hiden-promo-slide');
-  const prevBtn = document.getElementById('promoPrevBtn');
-  const nextBtn = document.getElementById('promoNextBtn');
-
-  if (!slides.length) return;
-
-  let currentSlide = 0;
-  let slideTimer = null;
-
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.toggle('active', i === index);
-    });
-    currentSlide = index;
-  }
-
-  function nextSlide() {
-    let next = (currentSlide + 1) % slides.length;
-    showSlide(next);
-  }
-
-  function prevSlide() {
-    let prev = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(prev);
-  }
-
-  function startAutoPlay() {
-    stopAutoPlay();
-    slideTimer = setInterval(nextSlide, 5000);
-  }
-
-  function stopAutoPlay() {
-    if (slideTimer) {
-      clearInterval(slideTimer);
-      slideTimer = null;
-    }
-  }
-
-  if (nextBtn) {
-    nextBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      nextSlide();
-      startAutoPlay();
-    });
-  }
-
-  if (prevBtn) {
-    prevBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      prevSlide();
-      startAutoPlay();
-    });
-  }
-
-  const container = document.querySelector('.hiden-promo-slider-wrap');
-  if (container) {
-    container.addEventListener('mouseenter', stopAutoPlay);
-    container.addEventListener('mouseleave', startAutoPlay);
-  }
-
-  startAutoPlay();
-}
