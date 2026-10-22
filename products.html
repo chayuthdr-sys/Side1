@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=3.0, user-scalable=yes">
+  <title>สินค้าและผลิตภัณฑ์ | บริษัท ส.เพิ่มพูน ฮีตเทค จำกัด - ฮีตเตอร์ หัววัดอุณหภูมิ และอุปกรณ์วัดคุมอุตสาหกรรม</title>
+  <meta name="description" content="ศูนย์รวมผลิตภัณฑ์ความร้อนอุตสาหกรรมและอุปกรณ์วัดคุมครบวงจร ฮีตเตอร์รัดท่อ ฮีตเตอร์ท่อกลม ฮีตเตอร์ครีบ เทอร์โมคับเปิ้ล RTD PT-100 ลูกลอยวัดระดับ สายไฟทนความร้อน บริษัท ส.เพิ่มพูน ฮีตเทค จำกัด">
+  <meta name="keywords" content="สินค้า ส.เพิ่มพูน ฮีตเทค, ฮีตเตอร์, thermocouple, RTD PT-100, level switch, tubular heater, band heater, สายไฟทนความร้อน, ตู้อบอุตสาหกรรม">
+  <meta property="og:title" content="สินค้าและผลิตภัณฑ์ - บริษัท ส.เพิ่มพูน ฮีตเทค จำกัด">
+  <meta property="og:description" content="ศูนย์รวมฮีตเตอร์ หัววัดอุณหภูมิ และอุปกรณ์ควบคุมความร้อนอุตสาหกรรม มาตรฐาน ISO9001: 2015">
+  <meta property="og:site_name" content="spt-th.vercel.app">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/cropped-SPT-icon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/cropped-SPT-icon-180x180.png">
+
+  <!-- Google Fonts Prompt & Sarabun -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&family=Sarabun:wght@300;400;500;600&display=swap">
+  
+  <!-- CSS Dependencies -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- 1. Header & Navigation Bar -->
+  <header class="site-header">
+    <div class="container">
+      <!-- Brand Logo -->
+      <a href="index.html#home" class="brand-logo-wrap" title="บริษัท ส.เพิ่มพูน ฮีตเทค จำกัด">
+        <img src="assets/images/cropped-SPT-logo.png" alt="SPT - บริษัท ส.เพิ่มพูน ฮีตเทค จำกัด" class="brand-logo-img">
+      </a>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- Main Navigation Menu -->
+      <nav class="main-navigation">
+        <ul class="nav-links-list">
+          <li class="nav-item"><a href="index.html#home" class="nav-link">HOME</a></li>
+          <li class="nav-item dropdown active">
+            <a href="products.html" class="nav-link dropdown-toggle">
+              สินค้า <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="products.html">สินค้าทั้งหมด</a></li>
+              <li><a href="products.html?cat=sensor">หัววัดอุณหภูมิเทอร์โมคับเปิ้ล และ RTD PT-100</a></li>
+              <li><a href="products.html?cat=heater">เซรามิคแบนด์ฮีตเตอร์ Ceramic Band Heater</a></li>
+              <li><a href="products.html?cat=level-switch">ลูกลอยวัดระดับ Flow Level Switch</a></li>
+              <li><a href="products.html?cat=wire-accessories">สายไฟทนความร้อน Heat Electric Wire</a></li>
+              <li><a href="products.html?cat=heater">ทิวบูล่าฮีตเตอร์ และ ฮีตเตอร์ครีบ Tubular Heater</a></li>
+              <li><a href="products.html?cat=wire-accessories">อุปกรณ์เชื่อมต่อปลั๊กฮีตเตอร์ Connection Plug Heater</a></li>
+              <li><a href="products.html?cat=custom-oven">ตู้อบอุตสาหกรรมและงานสั่งทำพิเศษ</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="services.html" class="nav-link">บริการ</a></li>
+          <li class="nav-item"><a href="index.html#about" class="nav-link">เกี่ยวกับเรา</a></li>
+          <li class="nav-item"><a href="index.html#contact" class="nav-link">ติดต่อเรา</a></li>
+        </ul>
+
+        <!-- Corporate Hotline Link -->
+        <div class="header-hotline">
+          <a href="tel:0866604052" class="header-contact-link" title="โทรติดต่อ">
+            <span class="contact-icon-circle">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </span>
+            <span class="contact-number">08-6660-4052</span>
+          </a>
+        </div>
+
+        <!-- Language Switcher -->
+        <div class="lang-switcher">
+          <button class="lang-btn" type="button" aria-label="Select language">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+            <span>TH</span>
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 2. Page Title Hero Banner -->
+  <section class="page-title-banner">
+    <div class="container">
+      <h1 class="page-heading">สินค้าและผลิตภัณฑ์</h1>
+      <p style="color: #e0f2fe; margin-top: 10px; font-size: 16px; font-weight: 300;">
+        ศูนย์รวมฮีตเตอร์ หัววัดอุณหภูมิ ลูกลอยวัดระดับ และอุปกรณ์ความร้อนอุตสาหกรรมครบวงจร
+      </p>
+    </div>
+  </section>
+
+  <!-- 3. Main Product Catalog Section -->
+  <main class="products-page-section">
+    <div class="container">
+
+      <!-- Category Filter Tabs -->
+      <div class="product-filter-container">
+        <button class="product-filter-btn active" data-filter="all">ทั้งหมด</button>
+        <button class="product-filter-btn" data-filter="heater">ฮีตเตอร์อุตสาหกรรม</button>
+        <button class="product-filter-btn" data-filter="sensor">หัววัดอุณหภูมิและเซนเซอร์</button>
+        <button class="product-filter-btn" data-filter="level-switch">ลูกลอยวัดระดับของเหลว</button>
+        <button class="product-filter-btn" data-filter="wire-accessories">สายไฟและอุปกรณ์เสริม</button>
+        <button class="product-filter-btn" data-filter="custom-oven">ตู้อบและงานสั่งทำพิเศษ</button>
+      </div>
+
+      <!-- Count Badge -->
+      <div class="products-count-badge">
+        แสดงผลิตภัณฑ์คุณภาพมาตรฐาน ส.เพิ่มพูน ฮีตเทค จำนวน <strong>12</strong> รายการ
+      </div>
+
+      <!-- Products Grid -->
+      <div class="product-grid">
+
+        <!-- Product 1: Thermocouple -->
+        <div class="product-item-wrapper product-category-card" data-category="sensor">
+          <div class="product-img-wrapper">
+            <img src="assets/images/image-28.png" alt="หัววัดอุณหภูมิเทอร์โมคับเปิ้ล Thermocouple ส.เพิ่มพูน ฮีตเทค" loading="lazy">
+          </div>
+          <div class="product-info-wrap">
+            <span class="product-brand-tag">SPT BRAND • SENSOR</span>
+            <h3 class="product-category-name">THERMOCOUPLE SENSOR</h3>
+            <p class="product-spec-snippet">
+              หัววัดอุณหภูมิเทอร์โมคับเปิ้ลสำหรับกระบวนการผลิตอุตสาหกรรม ให้ความแม่นยำสูง ทนการกัดกร่อน ตอบสนองต่อการเปลี่ยนแปลงของอุณหภูมิได้อย่างรวดเร็ว
+            </p>
+            <div class="product-card-spec-box">
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">ชนิดเซนเซอร์:</span>
+                <span class="product-card-spec-val">Type K, Type J, Type R, Type S, Type T, Type E</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">ย่านอุณหภูมิ:</span>
+                <span class="product-card-spec-val">-40 °C ถึง 1600 °C</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">วัสดุท่อป้องกัน:</span>
+                <span class="product-card-spec-val">SUS304, SUS316, Incoloy600, SUS310s, Ceramic610</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">การประยุกต์ใช้:</span>
+                <span class="product-card-spec-val">เตาอบอุตสาหกรรม เตาเผา งานหลอมโลหะ ท่อส่งความร้อน</span>
+              </div>
+            </div>
+            <div class="product-tag-group">
+              <span class="product-tag-item">SUS316 / SUS310s</span>
+              <span class="product-tag-item">ทนความร้อนสูง</span>
+              <span class="product-tag-item">ผลิตตามแบบ Make to Order</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2: RTD PT-100 -->
+        <div class="product-item-wrapper product-category-card" data-category="sensor">
+          <div class="product-img-wrapper">
+            <img src="assets/images/image-28.png" alt="หัววัดอุณหภูมิ RTD PT-100 ส.เพิ่มพูน ฮีตเทค" loading="lazy">
+          </div>
+          <div class="product-info-wrap">
+            <span class="product-brand-tag">SPT BRAND • PRECISION</span>
+            <h3 class="product-category-name">RTD PT-100 &amp; PT-1000</h3>
+            <p class="product-spec-snippet">
+              หัววัดอุณหภูมิความละเอียดสูงชนิดความต้านทานแพลทินัม Class A และ Class B ให้ความเสถียรและแม่นยำสูงสุดในงานควบคุมอุณหภูมิที่ต้องการความละเอียด
+            </p>
+            <div class="product-card-spec-box">
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">ชนิดเซนเซอร์:</span>
+                <span class="product-card-spec-val">RTD Pt100, Pt1000 แบบ 2 สาย 3 สาย และ 4 สาย</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">ย่านอุณหภูมิ:</span>
+                <span class="product-card-spec-val">-200 °C ถึง 500 °C</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">วัสดุท่อป้องกัน:</span>
+                <span class="product-card-spec-val">สแตนเลส SUS316L Food Grade ท่อขนาด 3.2mm, 4.8mm, 6.35mm</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">การประยุกต์ใช้:</span>
+                <span class="product-card-spec-val">อุตสาหกรรมอาหาร ยา เคมีภัณฑ์ ห้องควบคุมความเย็น</span>
+              </div>
+            </div>
+            <div class="product-tag-group">
+              <span class="product-tag-item">Food Grade SUS316L</span>
+              <span class="product-tag-item">Class A Accuracy</span>
+              <span class="product-tag-item">มาตรฐาน ISO 9001:2015</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3: Ceramic Band Heater -->
+        <div class="product-item-wrapper product-category-card" data-category="heater">
+          <div class="product-img-wrapper">
+            <img src="assets/images/cropped-image-19-e1752382785519-1.png" alt="เซรามิคแบนด์ฮีตเตอร์ Ceramic Band Heater ส.เพิ่มพูน ฮีตเทค" loading="lazy">
+          </div>
+          <div class="product-info-wrap">
+            <span class="product-brand-tag">SPT BRAND • HEATER</span>
+            <h3 class="product-category-name">CERAMIC BAND HEATER</h3>
+            <p class="product-spec-snippet">
+              ฮีตเตอร์รัดท่อฉนวนเซรามิคคุณภาพสูง ถ่ายเทความร้อนสม่ำเสมอ ประหยัดพลังงาน ช่วยลดการสูญเสียความร้อนสู่ภายนอกด้วยฉนวนกันความร้อนพิเศษ
+            </p>
+            <div class="product-card-spec-box">
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">อุณหภูมิใช้งาน:</span>
+                <span class="product-card-spec-val">สูงสุด 600 °C</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">วัสดุโครงสร้าง:</span>
+                <span class="product-card-spec-val">ปลอกสแตนเลส SUS304 / SUS430 ฉนวนเซรามิค Steatite</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">แรงดันไฟฟ้า:</span>
+                <span class="product-card-spec-val">220VAC, 380VAC หรือสั่งทำตามพิกัดโรงงาน</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">การประยุกต์ใช้:</span>
+                <span class="product-card-spec-val">กระบอกฉีดพลาสติก Injection เครื่องเป่าถุงพลาสติก Extrusion</span>
+              </div>
+            </div>
+            <div class="product-tag-group">
+              <span class="product-tag-item">ประหยัดพลังงาน</span>
+              <span class="product-tag-item">ทนอุณหภูมิ 600 °C</span>
+              <span class="product-tag-item">สั่งทำได้ทุกขนาดเส้นผ่านศูนย์กลาง</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4: Strip Heater & Plate Heater -->
+        <div class="product-item-wrapper product-category-card" data-category="heater">
+          <div class="product-img-wrapper">
+            <img src="assets/images/cropped-image-19-e1752382785519-1.png" alt="สตริปฮีตเตอร์และฮีตเตอร์แผ่น Strip Heater ส.เพิ่มพูน ฮีตเทค" loading="lazy">
+          </div>
+          <div class="product-info-wrap">
+            <span class="product-brand-tag">SPT BRAND • HEATER</span>
+            <h3 class="product-category-name">STRIP HEATER &amp; PLATE HEATER</h3>
+            <p class="product-spec-snippet">
+              ฮีตเตอร์แผ่นและฮีตเตอร์แท่งแบน ออกแบบให้แนบสนิทกับพื้นผิวเรียบ ให้ความร้อนกระจายตัวทั่วทั้งแผ่น เหมาะกับงานซีลปากถุงและงานประกบแม่พิมพ์
+            </p>
+            <div class="product-card-spec-box">
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">อุณหภูมิใช้งาน:</span>
+                <span class="product-card-spec-val">สูงสุด 400 °C</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">วัสดุโครงสร้าง:</span>
+                <span class="product-card-spec-val">สแตนเลส SUS304 พร้อมฉนวนไมก้าหรือเซรามิคอัดแน่น</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">รูปแบบการติดตั้ง:</span>
+                <span class="product-card-spec-val">แผ่นเรียบเจาะรูยึดน็อต แคลมป์ประกบ หรือแบบมีครีบ</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">การประยุกต์ใช้:</span>
+                <span class="product-card-spec-val">มีดตัดพลาสติก เครื่องซีลบรรจุภัณฑ์ แท่นความร้อนแม่พิมพ์</span>
+              </div>
+            </div>
+            <div class="product-tag-group">
+              <span class="product-tag-item">แนบผิวเรียบสนิท</span>
+              <span class="product-tag-item">สั่งเจาะรูตามแบบ</span>
+              <span class="product-tag-item">สแตนเลสเกรดโรงงาน</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 5: Tubular Heater -->
+        <div class="product-item-wrapper product-category-card" data-category="heater">
+          <div class="product-img-wrapper">
+            <img src="assets/images/cropped-image-22-1.png" alt="ฮีตเตอร์ท่อกลมและฮีตเตอร์ครีบ Tubular Heater ส.เพิ่มพูน ฮีตเทค" loading="lazy">
+          </div>
+          <div class="product-info-wrap">
+            <span class="product-brand-tag">SPT BRAND • HEATER</span>
+            <h3 class="product-category-name">TUBULAR HEATER &amp; FINNED HEATER</h3>
+            <p class="product-spec-snippet">
+              ฮีตเตอร์ท่อกลมและฮีตเตอร์ครีบระบายความร้อน ดัดขึ้นรูปตามแบบการใช้งานได้หลากหลาย ทั้งรูปตัวยู ตัวดับเบิลยู เพิ่มพื้นที่ถ่ายเทความร้อนได้รวดเร็ว
+            </p>
+            <div class="product-card-spec-box">
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">วัสดุท่อ:</span>
+                <span class="product-card-spec-val">SUS304, SUS316L, Incoloy800 ครีบสแตนเลสพันแน่น</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">ขนาดเส้นผ่านท่อ:</span>
+                <span class="product-card-spec-val">Dia 8mm, 11mm, 14mm</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">กำลังไฟฟ้า:</span>
+                <span class="product-card-spec-val">500W ถึง 10,000W แรงดัน 110VAC ถึง 420VAC</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">การประยุกต์ใช้:</span>
+                <span class="product-card-spec-val">ตู้อบสี เตาอบลมร้อน ท่อดักท์ส่งลมร้อน ระบบอบแห้ง</span>
+              </div>
+            </div>
+            <div class="product-tag-group">
+              <span class="product-tag-item">Incoloy800 / SUS316</span>
+              <span class="product-tag-item">ดัดรูปตามแบบ</span>
+              <span class="product-tag-item">ครีบระบายความร้อนสแตนเลส</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6: Immersion Heater -->
+        <div class="product-item-wrapper product-category-card" data-category="heater">
+          <div class="product-img-wrapper">
+            <img src="assets/images/cropped-image-22-1.png" alt="ฮีตเตอร์จุ่มและฮีตเตอร์ต้มน้ำ Immersion Heater ส.เพิ่มพูน ฮีตเทค" loading="lazy">
+          </div>
+          <div class="product-info-wrap">
+            <span class="product-brand-tag">SPT BRAND • HEATER</span>
+            <h3 class="product-category-name">IMMERSION &amp; FLANGE HEATER</h3>
+            <p class="product-spec-snippet">
+              ฮีตเตอร์จุ่มสำหรับต้มน้ำ ต้มน้ำมัน และของเหลวอุตสาหกรรม ติดตั้งแบบเกลียวหรือหน้าแปลน ทนทานต่อแรงดันและการกัดกร่อน ปลอดภัยในสภาวะทำงานต่อเนื่อง
+            </p>
+            <div class="product-card-spec-box">
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">วัสดุท่อสัมผัส:</span>
+                <span class="product-card-spec-val">SUS316L, Incoloy840, ไทเทเนียมสำหรับสารกัดกร่อน</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">รูปแบบการติดตั้ง:</span>
+                <span class="product-card-spec-val">เกลียวทองเหลืองหรือสแตนเลส 1.5 - 2 นิ้ว หน้าแปลน JIS / ANSI</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">กำลังไฟฟ้า:</span>
+                <span class="product-card-spec-val">1,000W ถึง 30,000W ระบบไฟ 220V และ 380V 3 Phase</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">การประยุกต์ใช้:</span>
+                <span class="product-card-spec-val">ถังพักน้ำร้อน อ่างต้มน้ำมันทอด หม้อต้มไอน้ำ บ่อชุบโลหะ</span>
+              </div>
+            </div>
+            <div class="product-tag-group">
+              <span class="product-tag-item">SUS316L ทนกัดกร่อน</span>
+              <span class="product-tag-item">หน้าแปลนมาตรฐาน</span>
+              <span class="product-tag-item">กำลังวัตต์สูง ทนทาน</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 7: Flow Level Switch -->
+        <div class="product-item-wrapper product-category-card" data-category="level-switch">
+          <div class="product-img-wrapper">
+            <img src="assets/images/cropped-image-20-1.png" alt="ลูกลอยวัดระดับของเหลว Flow Level Switch ส.เพิ่มพูน ฮีตเทค" loading="lazy">
+          </div>
+          <div class="product-info-wrap">
+            <span class="product-brand-tag">SPT BRAND • LEVEL CONTROL</span>
+            <h3 class="product-category-name">FLOW LEVEL SWITCH</h3>
+            <p class="product-spec-snippet">
+              สวิตช์ลูกลอยวัดระดับของเหลวระบบแม่เหล็กความแม่นยำสูง โครงสร้างสแตนเลสสตีล แข็งแรงทนทาน ทนแรงดันและอุณหภูมิสูง สั่งตัดต่อระบบปั๊มอัตโนมัติแม่นยำ
+            </p>
+            <div class="product-card-spec-box">
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">วัสดุก้านและลูกลอย:</span>
+                <span class="product-card-spec-val">สแตนเลส SUS304 และ SUS316 Food Grade</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">จุดตรวจจับระดับ:</span>
+                <span class="product-card-spec-val">กำหนดได้ 1 ถึง 5 จุดสวิตช์ในก้านเดียวตามระดับถัง</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">พิกัดหน้าสัมผัส:</span>
+                <span class="product-card-spec-val">Reed Switch 50W, 220VAC / 0.5A ทนอุณหภูมิสูง 120 °C</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">การประยุกต์ใช้:</span>
+                <span class="product-card-spec-val">ถังเก็บน้ำ ถังน้ำมัน ถังเคมี หอหล่อเย็น บ่อบำบัดน้ำเสีย</span>
+              </div>
+            </div>
+            <div class="product-tag-group">
+              <span class="product-tag-item">SUS316 แม่เหล็กเสถียร</span>
+              <span class="product-tag-item">สั่งความยาวก้านได้</span>
+              <span class="product-tag-item">ติดตั้งด้านบนหรือด้านข้าง</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 8: Heat Electric Wire -->
+        <div class="product-item-wrapper product-category-card" data-category="wire-accessories">
+          <div class="product-img-wrapper">
+            <img src="assets/images/cropped-image-21.png" alt="สายไฟทนความร้อน Heat Electric Wire ส.เพิ่มพูน ฮีตเทค" loading="lazy">
+          </div>
+          <div class="product-info-wrap">
+            <span class="product-brand-tag">SPT BRAND • WIRE</span>
+            <h3 class="product-category-name">HEAT ELECTRIC WIRE</h3>
+            <p class="product-spec-snippet">
+              สายไฟทนความร้อนสูงเกรดโรงงานอุตสาหกรรม ตัวนำทองแดงชุบนิกเกิล หุ้มฉนวนซิลิโคนและใยแก้วถักเคลือบซิลิโคน ไม่กรอบแตก ทนสะเก็ดไฟและการขูดขีด
+            </p>
+            <div class="product-card-spec-box">
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">ย่านอุณหภูมิ:</span>
+                <span class="product-card-spec-val">-60 °C ถึง 200 °C / 300 °C / 500 °C</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">พิกัดแรงดัน:</span>
+                <span class="product-card-spec-val">300V / 500V, 600V</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">ขนาดสายไฟ:</span>
+                <span class="product-card-spec-val">0.5 sq.mm ถึง 35 sq.mm มีทั้งแกนเดี่ยวและหลายแกน</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">การประยุกต์ใช้:</span>
+                <span class="product-card-spec-val">ต่อขั้วฮีตเตอร์ ตู้ควบคุมเตาอบ เตาหลอม บริเวณอุณหภูมิสูง</span>
+              </div>
+            </div>
+            <div class="product-tag-group">
+              <span class="product-tag-item">ฉนวนใยแก้วทน 500 °C</span>
+              <span class="product-tag-item">ทองแดงชุบนิกเกิล</span>
+              <span class="product-tag-item">เกรดโรงงานอุตสาหกรรม</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 9: Connection Plug Heater -->
+        <div class="product-item-wrapper product-category-card" data-category="wire-accessories">
+          <div class="product-img-wrapper">
+            <img src="assets/images/image-23.png" alt="อุปกรณ์เชื่อมต่อปลั๊กฮีตเตอร์ Connection Plug Heater ส.เพิ่มพูน ฮีตเทค" loading="lazy">
+          </div>
+          <div class="product-info-wrap">
+            <span class="product-brand-tag">SPT BRAND • ACCESSORIES</span>
+            <h3 class="product-category-name">CONNECTION PLUG HEATER</h3>
+            <p class="product-spec-snippet">
+              ปลั๊กเสียบและข้อต่อฮีตเตอร์ 35 แอมป์ โครงสร้างอะลูมิเนียมผสมฉนวนเซรามิค ทนความร้อนสูง ป้องกันไฟฟ้าลัดวงจร ไม่หลอมละลาย ปลอดภัยต่อผู้ปฏิบัติงาน
+            </p>
+            <div class="product-card-spec-box">
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">พิกัดกระแสและไฟ:</span>
+                <span class="product-card-spec-val">35 Ampere, 220V ถึง 600VAC</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">วัสดุภายนอก:</span>
+                <span class="product-card-spec-val">ปลอกอะลูมิเนียมหล่อขึ้นรูป ทนแรงกระแทก</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">แกนสัมผัสภายใน:</span>
+                <span class="product-card-spec-val">เซรามิคทนความร้อนสูง ขั้วทองเหลืองชุบเงิน นำไฟฟ้าดีเยี่ยม</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">รุ่นมาตรฐาน:</span>
+                <span class="product-card-spec-val">PLH-1, PLH-2, PLH-4, PLH-5 ทั้งแบบตรงและงอ 90 องศา</span>
+              </div>
+            </div>
+            <div class="product-tag-group">
+              <span class="product-tag-item">พิกัดกระแส 35A</span>
+              <span class="product-tag-item">แกนเซรามิคทนร้อน</span>
+              <span class="product-tag-item">รุ่น PLH-1 / PLH-2</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 10: Cartridge Heater -->
+        <div class="product-item-wrapper product-category-card" data-category="heater">
+          <div class="product-img-wrapper">
+            <img src="assets/images/spt-banner-products-4k.png" alt="ฮีตเตอร์แท่ง Cartridge Heater ส.เพิ่มพูน ฮีตเทค" loading="lazy">
+          </div>
+          <div class="product-info-wrap">
+            <span class="product-brand-tag">SPT BRAND • HIGH DENSITY</span>
+            <h3 class="product-category-name">CARTRIDGE HEATER</h3>
+            <p class="product-spec-snippet">
+              ฮีตเตอร์แท่งความหนาแน่นวัตต์สูง ให้ความร้อนเข้มข้นในพื้นที่ขนาดกะทัดรัด ปลอกสแตนเลสเจียรผิวเรียบสวมรูแม่พิมพ์ได้แนบสนิท นำความร้อนได้เร็ว
+            </p>
+            <div class="product-card-spec-box">
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">ขนาดเส้นผ่านท่อ:</span>
+                <span class="product-card-spec-val">6.5mm, 8mm, 9.5mm, 12mm, 16mm ถึง 25mm</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">ความหนาแน่นวัตต์:</span>
+                <span class="product-card-spec-val">High Watt Density สูงสุด 25 W ต่อตารางเซนติเมตร</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">วัสดุปลอก:</span>
+                <span class="product-card-spec-val">สแตนเลส SUS304, SUS316L, Incoloy840</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">การประยุกต์ใช้:</span>
+                <span class="product-card-spec-val">รูแม่พิมพ์ฉีดพลาสติก เครื่องซีลบรรจุภัณฑ์ แท่นกดร้อน</span>
+              </div>
+            </div>
+            <div class="product-tag-group">
+              <span class="product-tag-item">High Watt Density</span>
+              <span class="product-tag-item">สวมรูแม่พิมพ์แนบสนิท</span>
+              <span class="product-tag-item">ผลิตตามแบบ Make to Order</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 11: Industrial Oven -->
+        <div class="product-item-wrapper product-category-card" data-category="custom-oven">
+          <div class="product-img-wrapper">
+            <img src="assets/images/spt-factory-front.jpg" alt="ตู้อบอุตสาหกรรมและงานสั่งทำพิเศษ ส.เพิ่มพูน ฮีตเทค" loading="lazy">
+          </div>
+          <div class="product-info-wrap">
+            <span class="product-brand-tag">SPT BRAND • SYSTEM INTEGRATION</span>
+            <h3 class="product-category-name">INDUSTRIAL OVEN &amp; CUSTOM MADE</h3>
+            <p class="product-spec-snippet">
+              ตู้อบความร้อนอุตสาหกรรม ออกแบบและคำนวณกำลังวัตต์ตามแบบหรือขนาดชิ้นงานของลูกค้า พร้อมระบบควบคุมอุณหภูมิดิจิทัลแม่นยำ และระบบความปลอดภัยครบวงจร
+            </p>
+            <div class="product-card-spec-box">
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">โครงสร้างผนัง:</span>
+                <span class="product-card-spec-val">ฉนวนใยหิน Rockwool หนา 100 - 150mm พัดลมกระจายลมร้อน</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">ระบบควบคุม:</span>
+                <span class="product-card-spec-val">Digital PID Temperature Controller ระบบตัดไฟนิรภัย</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">ย่านอุณหภูมิ:</span>
+                <span class="product-card-spec-val">ตั้งแต่ 50 °C ถึง 450 °C หรือตามสเปกกระบวนการผลิต</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">การประยุกต์ใช้:</span>
+                <span class="product-card-spec-val">ตู้อบสี ตู้อบแห้งชิ้นงาน ตู้อบไล่ความชื้น งานอบชิ้นส่วนยาง</span>
+              </div>
+            </div>
+            <div class="product-tag-group">
+              <span class="product-tag-item">ออกแบบตามสั่ง</span>
+              <span class="product-tag-item">ระบบดิจิทัล PID ควบคุมแม่นยำ</span>
+              <span class="product-tag-item">มาตรฐาน ISO 9001:2015</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 12: Cast-in Heater -->
+        <div class="product-item-wrapper product-category-card" data-category="heater">
+          <div class="product-img-wrapper">
+            <img src="assets/images/cropped-image-19-e1752382785519-1.png" alt="ฮีตเตอร์หล่ออะลูมิเนียม Cast-in Heater ส.เพิ่มพูน ฮีตเทค" loading="lazy">
+          </div>
+          <div class="product-info-wrap">
+            <span class="product-brand-tag">SPT BRAND • HEAVY DUTY</span>
+            <h3 class="product-category-name">CAST-IN ALUMINUM &amp; BRASS HEATER</h3>
+            <p class="product-spec-snippet">
+              ฮีตเตอร์หล่อฝังท่อความร้อนในเนื้ออะลูมิเนียมหรือทองเหลือง ให้การกระจายความร้อนสม่ำเสมอเป็นพิเศษ พร้อมท่อน้ำหล่อเย็นในตัวสำหรับลดอุณหภูมิฉุกเฉิน
+            </p>
+            <div class="product-card-spec-box">
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">วัสดุเนื้อหล่อ:</span>
+                <span class="product-card-spec-val">อะลูมิเนียมทน 400 °C หรือทองเหลืองทน 650 °C</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">ระบบหล่อเย็น:</span>
+                <span class="product-card-spec-val">ฝังท่อ Stainless Steel Cooling Tube สำหรับน้ำหรือลมหล่อเย็น</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">การติดตั้ง:</span>
+                <span class="product-card-spec-val">ประกบสองซีก ยึดด้วยน็อตความแข็งแรงสูง</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">การประยุกต์ใช้:</span>
+                <span class="product-card-spec-val">กระบอกเครื่องรีดพลาสติก Extrusion เครื่องฉีดพลาสติกสเปกสูง</span>
+              </div>
+            </div>
+            <div class="product-tag-group">
+              <span class="product-tag-item">มีท่อระบายความร้อนในตัว</span>
+              <span class="product-tag-item">ทนทานระดับ Heavy Duty</span>
+              <span class="product-tag-item">ผลิตตามแบบ Made to Order</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Engineering Support & Consultation Box -->
+      <div style="background: #ffffff; border: 1px solid var(--border-blue); border-radius: var(--radius-md); padding: 35px 30px; margin-top: 50px; text-align: center; box-shadow: var(--shadow-sm);">
+        <h3 style="font-size: 22px; font-weight: 700; color: #1F3864; margin-bottom: 12px;">
+          ต้องการคำปรึกษาทางวิศวกรรมความร้อน หรือสั่งผลิตสินค้าตามสเปกเฉพาะ?
+        </h3>
+        <p style="color: #4a5568; font-size: 15px; max-width: 750px; margin: 0 auto 20px; line-height: 1.6;">
+          ทีมงานวิศวกรและช่างผู้ชำนาญการ บริษัท ส.เพิ่มพูน ฮีตเทค จำกัด ประสบการณ์มากกว่า 15 ปี พร้อมช่วยคำนวณกำลังวัตต์ เลือกขนาดท่อ และออกแบบอุปกรณ์ความร้อนให้ตรงกับเครื่องจักรในโรงงานของคุณ
+        </p>
+        <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;">
+          <a href="tel:0866604052" class="btn-read-more" style="background-color: var(--primary-navy, #0a3d62); color: #ffffff;">
+            <span>โทรติดต่อฝ่ายขาย 08-6660-4052</span>
+          </a>
+          <a href="index.html#contact" class="btn-read-more" style="background-color: #f1f5f9; color: var(--primary-dark, #0a3d62); border: 1px solid #cbd5e1;">
+            <span>ส่งข้อความสอบถามทางแบบฟอร์ม</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- 4. Corporate Footer -->
+  <footer class="site-footer" id="footer">
+    <div class="container">
+      <div class="row">
+        <!-- Col 1: About Company -->
+        <div class="col-md-4 col-sm-6 col-xs-12 footer-col">
+          <div class="footer-logo-wrap">
+            <img src="assets/images/cropped-SPT-logo.png" alt="บริษัท ส.เพิ่มพูน ฮีตเทค จำกัด" class="footer-logo">
+          </div>
+          <p class="footer-desc">
+            บริษัท ส.เพิ่มพูน ฮีตเทค จำกัด รับผลิตและจำหน่าย Heater, Thermocouple, RTD PT-100, Level Switch และตู้อบอุตสาหกรรม โดยทีมช่างวิศวกรผู้เชี่ยวชาญที่มีประสบการณ์ยาวนาน มุ่งมั่นส่งมอบสินค้าคุณภาพมาตรฐานสากล
+          </p>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="col-md-2 col-sm-6 col-xs-12 footer-col">
+          <h4 class="footer-title">ลิงก์ด่วน</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#home">หน้าแรก</a></li>
+            <li><a href="products.html">หมวดหมู่สินค้า</a></li>
+            <li><a href="services.html">บริการ</a></li>
+            <li><a href="index.html#about">เกี่ยวกับเรา</a></li>
+            <li><a href="index.html#contact">ติดต่อเรา</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Products -->
+        <div class="col-md-3 col-sm-6 col-xs-12 footer-col">
+          <h4 class="footer-title">กลุ่มผลิตภัณฑ์</h4>
+          <ul class="footer-links">
+            <li><a href="products.html?cat=sensor">หัววัดอุณหภูมิเทอร์โมคับเปิ้ล</a></li>
+            <li><a href="products.html?cat=heater">เซรามิคแบนด์ฮีตเตอร์</a></li>
+            <li><a href="products.html?cat=level-switch">ลูกลอยวัดระดับของเหลว</a></li>
+            <li><a href="products.html?cat=heater">ฮีตเตอร์ท่อกลมและฮีตเตอร์ครีบ</a></li>
+            <li><a href="products.html?cat=wire-accessories">อุปกรณ์เชื่อมต่อปลั๊กฮีตเตอร์</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact Info -->
+        <div class="col-md-3 col-sm-6 col-xs-12 footer-col">
+          <h4 class="footer-title">ติดต่อฝ่ายบริการ</h4>
+          <div class="footer-contacts">
+            <p><strong>บริษัท ส.เพิ่มพูน ฮีตเทค จำกัด</strong></p>
+            <p>สายด่วนฝ่ายขาย: <a href="tel:0866604052">08-6660-4052</a></p>
+            <p>สายด่วนวิศวกรรม: <a href="tel:0864003676">08-6400-3676</a></p>
+            <p>อีเมล: <a href="mailto:spt.heattech@gmail.com">spt.heattech@gmail.com</a></p>
+            <p>เวลาทำการ: จันทร์ - เสาร์ เวลา 08.00 - 17.00 น.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p>© 2026 S. Permpoon Heattech Co., Ltd. All Rights Reserved. บริษัท ส.เพิ่มพูน ฮีตเทค จำกัด</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/widget.js"></script>
+</body>
+</html>

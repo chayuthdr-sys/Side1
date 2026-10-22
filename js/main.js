@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeroSlider();
   initNavigation();
   initLanguageSwitcher();
+  initProductFilter();
 });
 
 /* Hero Slider Controller */
@@ -136,6 +137,62 @@ function initLanguageSwitcher() {
       langBtn.innerHTML = `${globeSvg}<span>TH</span>${chevronSvg}`;
     }
   });
+}
+
+/* Product Category Filter for products.html */
+function initProductFilter() {
+  const filterBtns = document.querySelectorAll('.product-filter-btn');
+  const productItems = document.querySelectorAll('.product-item-wrapper');
+  const countBadge = document.querySelector('.products-count-badge');
+
+  if (!filterBtns.length || !productItems.length) return;
+
+  function filterCategory(category) {
+    let visibleCount = 0;
+
+    filterBtns.forEach(btn => {
+      if (btn.getAttribute('data-filter') === category) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+
+    productItems.forEach(item => {
+      const itemCat = item.getAttribute('data-category');
+      if (category === 'all' || itemCat === category) {
+        item.classList.remove('is-hidden');
+        visibleCount++;
+      } else {
+        item.classList.add('is-hidden');
+      }
+    });
+
+    if (countBadge) {
+      countBadge.innerHTML = `แสดงผลิตภัณฑ์คุณภาพมาตรฐาน ส.เพิ่มพูน ฮีตเทค จำนวน <strong>${visibleCount}</strong> รายการ`;
+    }
+  }
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const cat = btn.getAttribute('data-filter');
+      filterCategory(cat);
+    });
+  });
+
+  // Check URL query parameter e.g. ?cat=sensor
+  const urlParams = new URLSearchParams(window.location.search);
+  const catParam = urlParams.get('cat');
+  if (catParam) {
+    const matchingBtn = Array.from(filterBtns).find(btn => btn.getAttribute('data-filter') === catParam);
+    if (matchingBtn) {
+      filterCategory(catParam);
+      return;
+    }
+  }
+
+  // Default to all
+  filterCategory('all');
 }
 
 
