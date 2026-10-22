@@ -226,11 +226,14 @@
 
 .product-category-name {
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--primary-dark);
   margin-bottom: 10px;
   line-height: 1.35;
   transition: color 0.25s ease;
+  min-height: 28px;
+  display: flex;
+  align-items: center;
 }
 
 .product-category-card:hover .product-category-name {
@@ -238,11 +241,17 @@
 }
 
 .product-spec-snippet {
-  font-size: 14px;
+  font-size: 13.5px;
   color: var(--text-muted);
   line-height: 1.6;
-  margin-bottom: 16px;
-  flex-grow: 1;
+  margin-bottom: 14px;
+  height: 65px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 0 0 65px;
 }
 
 .product-view-link {
@@ -1096,17 +1105,25 @@
 
 .product-card-spec-box {
   background: #f8fafc;
-  border-radius: 6px;
+  border-radius: 8px;
   padding: 12px 14px;
-  margin: 12px 0 8px;
+  margin: 0 0 14px 0;
   border: 1px solid #e2e8f0;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 116px;
 }
 
 .product-card-spec-item {
-  display: flex;
-  font-size: 13px;
+  display: grid;
+  grid-template-columns: 105px 1fr;
+  column-gap: 8px;
+  font-size: 12.5px;
   line-height: 1.5;
   margin-bottom: 6px;
+  align-items: baseline;
 }
 
 .product-card-spec-item:last-child {
@@ -1114,16 +1131,15 @@
 }
 
 .product-card-spec-label {
-  color: #64748b;
-  font-weight: 500;
-  width: 95px;
-  flex-shrink: 0;
+  color: #475569;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 .product-card-spec-val {
   color: #0f172a;
-  font-weight: 600;
-  flex-grow: 1;
+  font-weight: 500;
+  word-break: break-word;
 }
 
 .product-tag-group {
@@ -1157,10 +1173,10 @@
 }
 
 .product-click-hint {
-  font-size: 13px;
+  font-size: 12.5px;
   font-weight: 600;
   color: #0288d1;
-  margin-top: 14px;
+  margin-top: auto;
   display: inline-flex;
   align-items: center;
   gap: 6px;
