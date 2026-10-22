@@ -355,15 +355,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .company-about-title {
   font-size: 28px;
-  font-weight: 400;
-  color: var(--primary-dark);
+  font-weight: 700;
+  color: #1F3864;
   margin-bottom: 18px;
   line-height: 1.3;
 }
 
 .company-about-title strong {
   font-weight: 700;
-  color: var(--primary-blue-dark);
+  color: #1F3864;
 }
 
 .company-about-desc {
