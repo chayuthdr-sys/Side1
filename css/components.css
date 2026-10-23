@@ -1047,32 +1047,29 @@
 }
 
 /* 5. Products Catalog Page & Filter Tabs */
-body.page-products .container,
 .products-page-section .container,
 .page-title-banner .container {
-  width: 95%;
-  max-width: 1480px;
+  width: 96%;
+  max-width: 1560px;
 }
 
 @media (min-width: 1440px) {
-  body.page-products .container,
   .products-page-section .container,
   .page-title-banner .container {
-    width: 94%;
-    max-width: 1540px;
-  }
-}
-
-@media (min-width: 1680px) {
-  body.page-products .container,
-  .products-page-section .container,
-  .page-title-banner .container {
-    width: 92%;
+    width: 95%;
     max-width: 1620px;
   }
 }
 
-body.page-products .product-info-wrap {
+@media (min-width: 1680px) {
+  .products-page-section .container,
+  .page-title-banner .container {
+    width: 94%;
+    max-width: 1680px;
+  }
+}
+
+.products-page-section .product-info-wrap {
   padding: 20px 18px;
 }
 
@@ -1147,7 +1144,7 @@ body.page-products .product-info-wrap {
 
 .product-card-spec-item {
   display: grid;
-  grid-template-columns: 108px 1fr;
+  grid-template-columns: 118px 1fr;
   column-gap: 8px;
   font-size: 12.5px;
   line-height: 1.5;
