@@ -39,6 +39,29 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.2px;
 }
 
+a {
+  color: var(--primary-blue-dark, #0288d1);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover, a:focus {
+  color: var(--primary-dark, #0a3d62);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #0a3d62 0%, #0288d1 100%) !important;
+  border-color: #0a3d62 !important;
+  color: #ffffff !important;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background: linear-gradient(135deg, #0288d1 0%, #0a3d62 100%) !important;
+  border-color: #0288d1 !important;
+  color: #ffffff !important;
+}
+
 /* Header & Navbar - High-End Corporate Standard */
 .site-header {
   position: fixed;
@@ -125,7 +148,22 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 3px solid var(--primary-blue);
 }
 
-.nav-item.dropdown:hover .dropdown-menu {
+.dropdown-caret-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 6px;
+  transition: transform 0.25s ease;
+  vertical-align: middle;
+}
+
+.nav-item.dropdown:hover .dropdown-caret-btn,
+.nav-item.dropdown.is-dropdown-open .dropdown-caret-btn {
+  transform: rotate(180deg);
+}
+
+.nav-item.dropdown:hover .dropdown-menu,
+.nav-item.dropdown.is-dropdown-open .dropdown-menu {
   display: block;
 }
 
@@ -315,12 +353,27 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid #edf2f7;
 }
 
+.company-intro-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.company-intro-text-col {
+  padding-right: 25px;
+}
+
+.company-intro-img-col {
+  padding-left: 25px;
+}
+
 .company-team-image-box {
   border-radius: var(--radius-md);
   overflow: hidden;
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 10px 25px rgba(10, 61, 98, 0.12);
   border: 1px solid var(--border-blue);
-  margin-bottom: 20px;
+  margin-bottom: 0;
   position: relative;
   background-color: #f1f5f9;
 }
@@ -400,21 +453,24 @@ h1, h2, h3, h4, h5, h6 {
 
 .feature-cards-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
 }
 
 .feature-card {
   background-color: var(--bg-ice);
   border: 1px solid #e0f2fe;
   border-radius: var(--radius-md);
-  padding: 20px 14px;
+  padding: 24px 16px;
   text-align: center;
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .feature-card:hover {
@@ -436,6 +492,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   color: var(--primary-dark);
   transition: all 0.3s ease;
+  flex-shrink: 0;
 }
 
 .feature-card:hover .feature-icon-box {
@@ -451,7 +508,16 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   color: var(--primary-dark);
   line-height: 1.4;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.nowrap-text {
   white-space: nowrap;
+}
+
+.feature-title-break {
+  display: none;
 }
 
 .feature-card p {
@@ -460,6 +526,77 @@ h1, h2, h3, h4, h5, h6 {
   color: #46707f;
   margin: 8px 0 0 0;
   text-align: center;
+}
+
+/* Company Certifications & Accreditations Strip - Apple UI Minimalist Style */
+.company-certifications-box {
+  margin-top: 24px;
+  padding: 16px 0 0 0;
+  background: transparent;
+  border: none;
+  border-top: 1px solid #e2e8f0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.certifications-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-bottom: 14px;
+}
+
+.certifications-title svg {
+  color: #0288d1;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  align-items: center;
+}
+
+.cert-item {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 4px 6px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s cubic-bezier(0.25, 0.1, 0.25, 1), opacity 0.25s ease;
+  box-shadow: none;
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.cert-item:hover,
+.cert-item:focus {
+  opacity: 1;
+  transform: translateY(-2px) scale(1.05);
+  border: none;
+  box-shadow: none;
+  text-decoration: none;
+}
+
+.cert-item img {
+  max-width: 100%;
+  max-height: 44px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  filter: contrast(102%);
 }
 
 @media (max-width: 991px) {
@@ -481,10 +618,153 @@ h1, h2, h3, h4, h5, h6 {
   .main-navigation.is-open { display: flex; }
   .nav-links-list { flex-direction: column; width: 100%; height: auto; }
   .nav-item { width: 100%; margin-bottom: 8px; height: auto; }
+  .nav-item.dropdown {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .nav-item.dropdown .dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .nav-item.dropdown .dropdown-menu {
+    position: static;
+    display: none;
+    float: none;
+    width: 100%;
+    box-shadow: none;
+    border: none;
+    border-left: 3px solid var(--primary-blue);
+    background-color: #f8fafc;
+    border-radius: 4px;
+    margin: 6px 0 10px 12px;
+    padding: 6px 0;
+    list-style: none;
+  }
+  .nav-item.dropdown.is-dropdown-open .dropdown-menu {
+    display: block;
+  }
+  .nav-item.dropdown .dropdown-menu li a {
+    padding: 10px 16px;
+    font-size: 14.5px;
+    color: #475569;
+    font-weight: 500;
+  }
+  .nav-item.dropdown .dropdown-menu li a:hover,
+  .nav-item.dropdown .dropdown-menu li a:active {
+    background-color: #e0f2fe;
+    color: var(--primary-dark);
+    padding-left: 20px;
+  }
   .nav-link { width: 100%; padding: 12px 16px; border-bottom: none; }
   .nav-item.active .nav-link { border-bottom: none; border-left: 4px solid var(--primary-blue); }
   .header-hotline { margin: 15px 0 0 0; padding: 0; border: none; width: 100%; }
   .header-contact-link { width: 100%; justify-content: center; }
   .lang-switcher { margin: 10px 0 0 0; }
-  .feature-cards-grid { margin-top: 30px; }
+  .company-intro-row {
+    margin-bottom: 25px;
+  }
+  .company-intro-text-col {
+    padding-right: 15px;
+    margin-bottom: 24px;
+  }
+  .company-intro-img-col {
+    padding-left: 15px;
+  }
+  .feature-title-break {
+    display: inline;
+  }
+  .company-certifications-box {
+    margin-top: 18px;
+    padding: 14px 0 0 0;
+    background: transparent;
+    border: none;
+    border-top: 1px solid #e2e8f0;
+    box-shadow: none;
+  }
+  .certifications-title {
+    font-size: 11px;
+    margin-bottom: 10px;
+  }
+  .certifications-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  .cert-item {
+    height: 42px;
+    padding: 2px 4px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+  .cert-item img {
+    max-height: 38px;
+  }
+  .feature-cards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 15px;
+  }
+  .feature-card {
+    padding: 18px 12px;
+  }
+  .feature-card h3 {
+    font-size: 14px;
+    line-height: 1.35;
+  }
+  .feature-card p {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+}
+
+@media (max-width: 480px) {
+  .company-certifications-box {
+    margin-top: 16px;
+    padding: 12px 0 0 0;
+    background: transparent;
+    border: none;
+    border-top: 1px solid #e2e8f0;
+    box-shadow: none;
+  }
+  .certifications-title {
+    font-size: 10.5px;
+    margin-bottom: 8px;
+  }
+  .certifications-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+  .cert-item {
+    height: 36px;
+    padding: 2px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+  .cert-item img {
+    max-height: 32px;
+  }
+  .feature-cards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .feature-card {
+    padding: 14px 8px;
+  }
+  .feature-card .feature-icon-box {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 8px;
+  }
+  .feature-card h3 {
+    font-size: 13px;
+  }
+  .feature-card p {
+    font-size: 11px;
+    margin-top: 5px;
+    line-height: 1.35;
+  }
 }

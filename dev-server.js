@@ -45,8 +45,12 @@ const server = http.createServer((req, res) => {
   const decodedUrl = decodeURIComponent(requestUrl);
   if (requestUrl === '/' || decodedUrl === '/หน้าแรก') {
     requestUrl = '/index.html';
-  } else if (decodedUrl === '/บริการ' || decodedUrl === '/services') {
-    requestUrl = '/services.html';
+  } else if (decodedUrl === '/บริการ' || decodedUrl === '/services' || decodedUrl === '/services.html') {
+    res.writeHead(302, { 'Location': '/index.html#services' });
+    res.end();
+    return;
+  } else if (decodedUrl === '/products' || decodedUrl === '/สินค้า') {
+    requestUrl = '/products.html';
   }
 
   const safePath = path.normalize(decodeURIComponent(requestUrl)).replace(/^(\.\.[\/\\])+/, '');
@@ -72,7 +76,12 @@ const server = http.createServer((req, res) => {
         res.end('500 Internal Server Error');
         return;
       }
-      res.writeHead(200, { 'Content-Type': contentType });
+      res.writeHead(200, {
+        'Content-Type': contentType,
+        'Cache-Control': 'no-cache, no-store, must-revalidate',
+        'Pragma': 'no-cache',
+        'Expires': '0'
+      });
       res.end(content);
     });
   });

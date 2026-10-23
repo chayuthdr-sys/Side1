@@ -48,18 +48,19 @@
         <ul class="nav-links-list">
           <li class="nav-item active"><a href="#home" class="nav-link">HOME</a></li>
           <li class="nav-item dropdown">
-            <a href="products.html" class="nav-link dropdown-toggle">
-              สินค้า <span class="caret"></span>
+            <a href="products.html" class="nav-link dropdown-toggle" role="button" aria-expanded="false">
+              <span>สินค้า</span>
+              <span class="dropdown-caret-btn" aria-label="เปิดหมวดหมู่ย่อย">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
             </a>
             <ul class="dropdown-menu">
               <li><a href="products.html">สินค้าทั้งหมด</a></li>
-              <li><a href="products.html?cat=sensor">หัววัดอุณหภูมิเทอร์โมคับเปิ้ล และ RTD PT-100</a></li>
-              <li><a href="products.html?cat=heater">เซรามิคแบนด์ฮีตเตอร์ Ceramic Band Heater</a></li>
-              <li><a href="products.html?cat=level-switch">ลูกลอยวัดระดับ Flow Level Switch</a></li>
-              <li><a href="products.html?cat=wire-accessories">สายไฟทนความร้อน Heat Electric Wire</a></li>
-              <li><a href="products.html?cat=heater">ทิวบูล่าฮีตเตอร์ และ ฮีตเตอร์ครีบ Tubular Heater</a></li>
-              <li><a href="products.html?cat=wire-accessories">อุปกรณ์เชื่อมต่อปลั๊กฮีตเตอร์ Connection Plug Heater</a></li>
-              <li><a href="products.html?cat=custom-oven">ตู้อบอุตสาหกรรมและงานสั่งทำพิเศษ</a></li>
+              <li><a href="products.html?cat=heater">ฮีตเตอร์อุตสาหกรรม</a></li>
+              <li><a href="products.html?cat=sensor">หัววัดอุณหภูมิและเซนเซอร์</a></li>
+              <li><a href="products.html?cat=level-switch">ลูกลอยวัดระดับของเหลว</a></li>
             </ul>
           </li>
           <li class="nav-item"><a href="#services" class="nav-link">บริการ</a></li>
@@ -77,21 +78,6 @@
             </span>
             <span class="contact-number">08-6660-4052</span>
           </a>
-        </div>
-
-        <!-- Language Switcher (Clean Vector Globe) -->
-        <div class="lang-switcher">
-          <button class="lang-btn" type="button" aria-label="Select language">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/>
-              <line x1="2" y1="12" x2="22" y2="12"/>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-            </svg>
-            <span>TH</span>
-            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="6 9 12 15 18 9"/>
-            </svg>
-          </button>
         </div>
       </nav>
     </div>
@@ -175,180 +161,303 @@
   <!-- 3. Company Highlight & Authentic Engineering Team -->
   <section class="section-padding company-highlight-section" id="about">
     <div class="container">
-      <div class="row" style="display: flex; flex-wrap: wrap; align-items: center;">
-        <div class="col-md-6 col-xs-12">
+      <div class="row company-intro-row">
+        <div class="col-md-6 col-xs-12 company-intro-text-col">
           <h2 class="company-about-title" style="color: #1F3864;">บริษัท <strong style="color: #1F3864;">ส.เพิ่มพูน ฮีตเทค</strong> จำกัด</h2>
           <p class="company-about-desc">
-            เป็นผู้รับออกแบบและผลิตพร้อมติดตั้ง งานหัววัดอุณหภูมิ thermocouple,<br><span style="white-space: nowrap;">RTD PT-100</span>, PT-1000, ฮีตเตอร์ทุกชนิด, อุปกรณ์วัดระดับของเหลว และตู้อบอุตสาหกรรมสำหรับโรงงานอุตสาหกรรมทุกชนิด โดยช่างและวิศวกรที่มีประสบการณ์มากกว่า 15 ปี ที่พร้อมให้คำปรึกษา ออกแบบตามความต้องการเฉพาะของโรงงานอุตสาหกรรม
+            เป็นผู้รับออกแบบและผลิตพร้อมติดตั้ง งานหัววัดอุณหภูมิ thermocouple, <span style="white-space: nowrap;">RTD PT-100</span>, PT-1000, ฮีตเตอร์ทุกชนิด, อุปกรณ์วัดระดับของเหลว และตู้อบอุตสาหกรรมสำหรับโรงงานอุตสาหกรรมทุกชนิด โดยช่างและวิศวกรที่มีประสบการณ์มากกว่า 15 ปี ที่พร้อมให้คำปรึกษา ออกแบบตามความต้องการเฉพาะของโรงงานอุตสาหกรรม
           </p>
           <p class="company-about-desc">
             กระบวนการผลิตผ่านมาตรฐาน ISO9001: 2015 เพื่อการส่งมอบสินค้าและบริการที่มีคุณภาพสม่ำเสมอ ตรงตามความต้องการของลูกค้า พร้อมระบบตรวจสอบประวัติชิ้นงานย้อนหลังอย่างเป็นระบบ เพื่อให้ลูกค้ามั่นใจในคุณภาพและมาตรฐานความปลอดภัยสูงสุด
           </p>
-          <a href="#contact" class="btn-read-more">
-            <span>ติดต่อขอรับคำปรึกษา</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </a>
+
+          <!-- Authentic Accreditation & Quality Certifications -->
+          <div class="company-certifications-box">
+            <div class="certifications-title">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+              <span>การรับรองมาตรฐานคุณภาพระดับสากล</span>
+            </div>
+            <div class="certifications-grid">
+              <a href="assets/images/Certif1.jpg" target="_blank" rel="noopener noreferrer" class="cert-item" title="ISO 9001:2015 Quality Management System">
+                <img src="assets/images/Certif1.jpg" alt="ISO 9001:2015" loading="lazy">
+              </a>
+              <a href="assets/images/Certif2.jpg" target="_blank" rel="noopener noreferrer" class="cert-item" title="B-ADVANCY Certification UK Limited">
+                <img src="assets/images/Certif2.jpg" alt="B-ADVANCY Certification UK" loading="lazy">
+              </a>
+              <a href="assets/images/Certif3.jpg" target="_blank" rel="noopener noreferrer" class="cert-item" title="ASIB Accreditation Services International Board">
+                <img src="assets/images/Certif3.jpg" alt="ASIB Accreditation International" loading="lazy">
+              </a>
+              <a href="assets/images/Certif4.jpg" target="_blank" rel="noopener noreferrer" class="cert-item" title="IAF Multilateral Recognition Arrangement">
+                <img src="assets/images/Certif4.jpg" alt="IAF Multilateral Recognition Arrangement" loading="lazy">
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="col-md-6 col-xs-12">
+        <div class="col-md-6 col-xs-12 company-intro-img-col">
           <!-- Authentic Factory Photo from SPT -->
           <div class="company-team-image-box">
             <img src="assets/images/spt-factory-front.jpg" width="1250" height="848" alt="สำนักงานและโรงงาน บริษัท ส.เพิ่มพูน ฮีตเทค จำกัด" loading="lazy">
           </div>
-          <div class="feature-cards-grid">
-            <div class="feature-card">
-              <div class="feature-icon-box">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="3"></circle>
-                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
-                </svg>
-              </div>
-              <h3>ผลิตตามสั่งแบบ Make to Order</h3>
-              <p>ผลิตตามแบบหรือตัวอย่าง<br>ตามที่ลูกค้าต้องการ</p>
-            </div>
-            <div class="feature-card">
-              <div class="feature-icon-box">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
-                  <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
-                  <path d="m9 14 2 2 4-4"></path>
-                </svg>
-              </div>
-              <h3>ทวนสอบประวัติย้อนหลัง</h3>
-              <p>บันทึกสเปกและข้อมูลการผลิต<br>เพื่อรองรับการสั่งซ้ำได้รวดเร็ว</p>
-            </div>
-            <div class="feature-card">
-              <div class="feature-icon-box">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="9" cy="7" r="4"></circle>
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                </svg>
-              </div>
-              <h3>ทีมงานประสบการณ์กว่า 15 ปี</h3>
-              <p>ทีมงานคุณภาพที่พร้อมซัพพอร์ต<br>และให้คำปรึกษา</p>
-            </div>
-            <div class="feature-card">
-              <div class="feature-icon-box">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                  <polyline points="9 12 11 14 15 10"/>
-                </svg>
-              </div>
-              <h3>After-sales Service</h3>
-              <p>รับประกันสินค้า ให้คำด้านเทคนิค<br>การบำรุงรักษา</p>
-            </div>
+        </div>
+      </div>
+      <div class="feature-cards-grid">
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+            </svg>
           </div>
+          <h3 class="feature-card-title">ผลิตตามสั่งแบบ <br class="feature-title-break"><span class="nowrap-text">Make to Order</span></h3>
+          <p>ผลิตตามแบบหรือตัวอย่างตามที่ลูกค้าต้องการ</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+              <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+              <path d="m9 14 2 2 4-4"></path>
+            </svg>
+          </div>
+          <h3>ทวนสอบประวัติย้อนหลัง</h3>
+          <p>บันทึกสเปกและข้อมูลการผลิตเพื่อรองรับการสั่งซ้ำได้รวดเร็ว</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <h3>ทีมงานประสบการณ์กว่า 15 ปี</h3>
+          <p>ทีมงานคุณภาพที่พร้อมซัพพอร์ตและให้คำปรึกษา</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <polyline points="9 12 11 14 15 10"/>
+            </svg>
+          </div>
+          <h3>After-sales Service</h3>
+          <p>รับประกันสินค้า ให้คำด้านเทคนิคการบำรุงรักษา</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 4. Product Categories Grid Section -->
+  <!-- 4. Featured Products Section -->
   <section class="section-padding product-categories-section" id="products">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header" style="margin-bottom: 45px;">
         <h2 class="section-title">สินค้า<strong>ของเรา</strong></h2>
         <p class="section-subtitle">ศูนย์รวมผลิตภัณฑ์ความร้อนอุตสาหกรรมและอุปกรณ์วัดคุมครบวงจร มาตรฐาน <span style="white-space: nowrap;">บริษัท ส.เพิ่มพูน ฮีตเทค จำกัด</span></p>
       </div>
 
+      <!-- Products Grid (6 Featured Products) -->
       <div class="product-grid">
-        <!-- Category 1: Thermocouple & RTD PT-100 -->
-        <a href="#contact" class="product-category-card">
-          <div class="product-img-wrapper">
-            <img src="assets/images/image-28.png" alt="Thermocouple, RTD PT100, PT1000 ส.เพิ่มพูน ฮีตเทค">
-          </div>
-          <div class="product-info-wrap">
-            <span class="product-brand-tag">SPT BRAND</span>
-            <h3 class="product-category-name">THERMOCOUPLE & RTD PT-100</h3>
-            <p class="product-spec-snippet">หัวเซนเซอร์สำหรับวัดอุณหภูมิ ย่านการวัด -40 ถึง 1600 °C ทั้ง Type K, J, R, S, T, E พร้อมวัสดุสแตนเลส SUS304, SUS316 และ Ceramic610</p>
-            <span class="product-view-link">ขอใบเสนอราคาคลิกที่นี่ →</span>
-          </div>
-        </a>
 
-        <!-- Category 2: Ceramic Band Heater -->
-        <a href="#contact" class="product-category-card">
+        <!-- Product 1: Band Heater -->
+        <div class="product-item-wrapper product-category-card" data-category="heater" data-product-id="band-heater">
           <div class="product-img-wrapper">
-            <img src="assets/images/cropped-image-19-e1752382785519-1.png" alt="Ceramic Band Heater ส.เพิ่มพูน ฮีตเทค">
+            <img src="assets/images/Band%20Heater1.jpg" alt="ฮีตเตอร์รัดท่อ Band Heater ส.เพิ่มพูน ฮีตเทค" loading="lazy">
           </div>
           <div class="product-info-wrap">
-            <span class="product-brand-tag">SPT BRAND</span>
+            <h3 class="product-category-name">BAND HEATER</h3>
+            <p class="product-spec-snippet">
+              ฮีตเตอร์รัดท่อแบบแคลมป์รัด โครงสร้างสแตนเลสคุณภาพสูง กระจายความร้อนทั่วถึง เหมาะสำหรับเครื่องฉีดพลาสติก ท่อส่งความร้อน
+            </p>
+            <div class="product-card-spec-box">
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">กำลังไฟฟ้า:</span>
+                <span class="product-card-spec-val">สั่งทำตามขนาดวัตต์/โวลต์</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">อุณหภูมิใช้งาน:</span>
+                <span class="product-card-spec-val">0 - 350 °C</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">โครงสร้างภายนอก:</span>
+                <span class="product-card-spec-val">สแตนเลส SUS304</span>
+              </div>
+            </div>
+            <div class="product-click-hint">
+              <span>คลิกเพื่อดูรายละเอียด</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2: Ceramic Band Heater -->
+        <div class="product-item-wrapper product-category-card" data-category="heater" data-product-id="ceramic-band-heater">
+          <div class="product-img-wrapper">
+            <img src="assets/images/Ceramic%20Band%20Heater1.jpg" alt="Ceramic Band Heater ฮีตเตอร์รัดท่อเซรามิค ส.เพิ่มพูน ฮีตเทค" loading="lazy">
+          </div>
+          <div class="product-info-wrap">
             <h3 class="product-category-name">CERAMIC BAND HEATER</h3>
-            <p class="product-spec-snippet">ฮีตเตอร์แบบรัดท่อฉนวนเซรามิค ให้ความร้อนสม่ำเสมอ ประหยัดพลังงาน เหมาะสำหรับงานให้ความร้อนกับของเหลวและเครื่องฉีดพลาสติก</p>
-            <span class="product-view-link">ขอใบเสนอราคาคลิกที่นี่ →</span>
+            <p class="product-spec-snippet">
+              ฮีตเตอร์รัดท่อฉนวนเซรามิค ให้ความร้อนสม่ำเสมอ ประหยัดพลังงาน ทนความร้อนสูง เหมาะสำหรับงานให้ความร้อนกับของเหลวและเครื่องฉีดพลาสติก
+            </p>
+            <div class="product-card-spec-box">
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">กำลังไฟฟ้า:</span>
+                <span class="product-card-spec-val">สั่งทำตามขนาดวัตต์/โวลต์</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">อุณหภูมิใช้งาน:</span>
+                <span class="product-card-spec-val">0 - 500 °C</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">วัสดุ:</span>
+                <span class="product-card-spec-val">แผ่นสแตนเลสและเซรามิคทนความร้อน</span>
+              </div>
+            </div>
+            <div class="product-click-hint">
+              <span>คลิกเพื่อดูรายละเอียด</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </div>
           </div>
-        </a>
+        </div>
 
-        <!-- Category 3: Flow Level Switch -->
-        <a href="#contact" class="product-category-card">
+        <!-- Product 3: Tubular Heater -->
+        <div class="product-item-wrapper product-category-card" data-category="heater" data-product-id="tubular-heater">
           <div class="product-img-wrapper">
-            <img src="assets/images/cropped-image-20-1.png" alt="Flow Level Switch ส.เพิ่มพูน ฮีตเทค">
+            <img src="assets/images/Tubular%20Heater1.jpg" alt="Tubular Heater ฮีตเตอร์ท่อกลม ส.เพิ่มพูน ฮีตเทค" loading="lazy">
           </div>
           <div class="product-info-wrap">
-            <span class="product-brand-tag">SPT BRAND</span>
-            <h3 class="product-category-name">FLOW LEVEL SWITCH</h3>
-            <p class="product-spec-snippet">ลูกลอยวัดระดับของเหลว สวิตช์สแตนเลสแม่เหล็กความแม่นยำสูง สามารถเลือกจำนวนลูกลอยและความยาวแกนได้ตามขนาดถัง</p>
-            <span class="product-view-link">ขอใบเสนอราคาคลิกที่นี่ →</span>
-          </div>
-        </a>
-
-        <!-- Category 4: Heat Electric Wire -->
-        <a href="#contact" class="product-category-card">
-          <div class="product-img-wrapper">
-            <img src="assets/images/cropped-image-21.png" alt="Heat Electric Wire ส.เพิ่มพูน ฮีตเทค">
-          </div>
-          <div class="product-info-wrap">
-            <span class="product-brand-tag">SPT BRAND</span>
-            <h3 class="product-category-name">HEAT ELECTRIC WIRE</h3>
-            <p class="product-spec-snippet">สายไฟทนความร้อนสูง เกรดโรงงานอุตสาหกรรม มีหลายไซส์และหลายขนาดให้เลือกตามพิกัดกระแสและระดับอุณหภูมิใช้งาน</p>
-            <span class="product-view-link">ขอใบเสนอราคาคลิกที่นี่ →</span>
-          </div>
-        </a>
-
-        <!-- Category 5: Tubular Heater -->
-        <a href="#contact" class="product-category-card">
-          <div class="product-img-wrapper">
-            <img src="assets/images/cropped-image-22-1.png" alt="Tubular Heater ส.เพิ่มพูน ฮีตเทค">
-          </div>
-          <div class="product-info-wrap">
-            <span class="product-brand-tag">SPT BRAND</span>
             <h3 class="product-category-name">TUBULAR HEATER</h3>
-            <p class="product-spec-snippet">ฮีตเตอร์ท่อกลมและฮีตเตอร์ครีบ วัสดุ SUS304, SUS316, Incoloy ขนาดท่อ Dia 8mm., 11mm, 14mm กำลังไฟฟ้า 110VAC – 420VAC</p>
-            <span class="product-view-link">ขอใบเสนอราคาคลิกที่นี่ →</span>
+            <p class="product-spec-snippet">
+              ฮีตเตอร์ท่อกลมและฮีตเตอร์ครีบ ให้ความร้อนคงที่ ทนทาน ดัดขึ้นรูปทรงต่างๆ ได้ตามลักษณะเตาอบ อ่างต้มน้ำ หรือท่อลมร้อน
+            </p>
+            <div class="product-card-spec-box">
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">แรงดันไฟฟ้า:</span>
+                <span class="product-card-spec-val">110VAC - 420VAC</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">อุณหภูมิใช้งาน:</span>
+                <span class="product-card-spec-val">0 - 650 °C</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">วัสดุท่อ:</span>
+                <span class="product-card-spec-val">SUS304, SUS316, Incoloy</span>
+              </div>
+            </div>
+            <div class="product-click-hint">
+              <span>คลิกเพื่อดูรายละเอียด</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </div>
           </div>
-        </a>
+        </div>
 
-        <!-- Category 6: Connection Plug Heater -->
-        <a href="#contact" class="product-category-card">
+        <!-- Product 4: Thermocouple -->
+        <div class="product-item-wrapper product-category-card" data-category="sensor" data-product-id="thermocouple">
           <div class="product-img-wrapper">
-            <img src="assets/images/image-23.png" alt="Connection Plug Heater ส.เพิ่มพูน ฮีตเทค">
+            <img src="assets/images/Thermocouple1.jpg" alt="Thermocouple หัววัดอุณหภูมิเทอร์โมคับเปิ้ล ส.เพิ่มพูน ฮีตเทค" loading="lazy">
           </div>
           <div class="product-info-wrap">
-            <span class="product-brand-tag">SPT BRAND</span>
-            <h3 class="product-category-name">CONNECTION PLUG HEATER</h3>
-            <p class="product-spec-snippet">อุปกรณ์เชื่อมต่อฮีตเตอร์ 35 Amp Ceramic Aluminum ปลอดภัย ทนความร้อนสูง รุ่นยอดนิยม PLH-1, PLH-2, PLH-4, PLH-5</p>
-            <span class="product-view-link">ขอใบเสนอราคาคลิกที่นี่ →</span>
+            <h3 class="product-category-name">THERMOCOUPLE</h3>
+            <p class="product-spec-snippet">
+              เซนเซอร์วัดอุณหภูมิที่ทำจากโลหะต่างชนิดกัน 2 เส้น ประกอบด้วยขั้วบวกและขั้วลบ ใช้หลักการเปลี่ยนแปลงค่าอุณหภูมิเป็นค่าความต่างศักย์
+            </p>
+            <div class="product-card-spec-box">
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">Type:</span>
+                <span class="product-card-spec-val">K, J, R, S, T, E</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">วัสดุ:</span>
+                <span class="product-card-spec-val">สแตนเลส SUS304, SUS316, Incoloy</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">ย่านวัดอุณหภูมิ:</span>
+                <span class="product-card-spec-val">-40 ถึง 1600 °C</span>
+              </div>
+            </div>
+            <div class="product-click-hint">
+              <span>คลิกเพื่อดูรายละเอียด</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </div>
           </div>
-        </a>
+        </div>
+
+        <!-- Product 5: Flow Level Switch -->
+        <div class="product-item-wrapper product-category-card" data-category="level-switch" data-product-id="level-switch">
+          <div class="product-img-wrapper">
+            <img src="assets/images/cropped-image-20-1.png" alt="Flow Level Switch ลูกลอยวัดระดับของเหลว ส.เพิ่มพูน ฮีตเทค" loading="lazy">
+          </div>
+          <div class="product-info-wrap">
+            <h3 class="product-category-name">FLOW LEVEL SWITCH</h3>
+            <p class="product-spec-snippet">
+              ลูกลอยวัดระดับของเหลว สวิตช์สแตนเลสแม่เหล็กความแม่นยำสูง เลือกจำนวนลูกลอยและความยาวแกนได้ตามขนาดถัง
+            </p>
+            <div class="product-card-spec-box">
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">เกลียวติดตั้ง:</span>
+                <span class="product-card-spec-val">เกลียวประปา / หน้าแปลนตามสั่ง</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">ระดับอุณหภูมิ:</span>
+                <span class="product-card-spec-val">0 - 120 °C</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">วัสดุโครงสร้าง:</span>
+                <span class="product-card-spec-val">สแตนเลส SUS304 / SUS316</span>
+              </div>
+            </div>
+            <div class="product-click-hint">
+              <span>คลิกเพื่อดูรายละเอียด</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6: Heater Coil -->
+        <div class="product-item-wrapper product-category-card" data-category="heater" data-product-id="heater-coil">
+          <div class="product-img-wrapper">
+            <img src="assets/images/Heater%20Coil1.jpg" alt="Heater Coil ฮีตเตอร์คอยล์ ลวดความร้อน ส.เพิ่มพูน ฮีตเทค" loading="lazy">
+          </div>
+          <div class="product-info-wrap">
+            <h3 class="product-category-name">HEATER COIL</h3>
+            <p class="product-spec-snippet">
+              อุปกรณ์ทำความร้อนประเภทหนึ่งที่ใช้ลวดความต้านทานไฟฟ้า เช่น ลวดนิโครม มาขดเป็นเกลียวหรือรูปทรงคอยล์ เหมาะกับงานที่ต้องการลมร้อนสูง
+            </p>
+            <div class="product-card-spec-box">
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">ลวดความร้อน:</span>
+                <span class="product-card-spec-val">ลวดนิโครมเกรดทนความร้อนสูง</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">ลักษณะรูปทรง:</span>
+                <span class="product-card-spec-val">ขดเป็นเกลียวหรือรูปทรงคอยล์</span>
+              </div>
+              <div class="product-card-spec-item">
+                <span class="product-card-spec-label">การประยุกต์ใช้:</span>
+                <span class="product-card-spec-val">งานที่ต้องการลมร้อนสูง และระบบเป่าความร้อน</span>
+              </div>
+            </div>
+            <div class="product-click-hint">
+              <span>คลิกเพื่อดูรายละเอียด</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </div>
+          </div>
+        </div>
+
       </div>
 
-      <div style="text-align: center; margin-top: 40px;">
-        <a href="products.html" class="btn-read-more" style="background-color: var(--primary-navy, #0a3d62); color: #ffffff; padding: 12px 28px; font-size: 15px; display: inline-flex;">
-          <span>ดูรายละเอียดและสเปกสินค้าทั้งหมด</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-            <polyline points="12 5 19 12 12 19"></polyline>
-          </svg>
+      <!-- View All Products Link -->
+      <div style="text-align: center; margin-top: 45px;">
+        <a href="products.html" class="btn-view-all-products">
+          <span>ดูสินค้าทั้งหมด</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
         </a>
       </div>
     </div>
   </section>
 
-
-  <!-- 6. Hiden-Style Engineering Services Section -->
+<!-- 6. Hiden-Style Engineering Services Section -->
   <section class="hiden-services-section" id="services">
     <div class="container">
       <!-- Section Title Header -->
@@ -396,7 +505,7 @@
       <div class="services-block-row reverse">
         <div class="services-img-col">
           <div class="services-img-card">
-            <img src="assets/images/service-engineer-inspection.jpg" alt="บริการออกแบบและควบคุมการผลิตโดยทีมงานวิศวกร ส.เพิ่มพูน ฮีตเทค">
+            <img src="assets/images/Services.jpg" alt="บริการออกแบบและควบคุมการผลิตโดยทีมงานวิศวกร ส.เพิ่มพูน ฮีตเทค">
           </div>
         </div>
         <div class="services-text-col">
@@ -407,19 +516,6 @@
           <p class="services-desc-text">
             ออกแบบและคำนวณฮีตเตอร์ตามวัตถุประสงค์การใช้งานจริงและประหยัดงบประมาณ พร้อมทั้งให้คำปรึกษาด้านเทคนิคการใช้ฮีตเตอร์ที่ถูกต้องเหมาะสม เพื่อยืดอายุการใช้งานให้ยาวนาน รับสั่งทำฮีตเตอร์อุตสาหกรรม เทอร์โมคัปเปิล RTD PT100 และหัววัดอุณหภูมิตามย่านอุณหภูมิที่ใช้งาน และตามงบประมาณที่ลูกค้าต้องการ
           </p>
-          <div class="services-terms-box">
-            <div class="services-terms-title">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
-              <span>เงื่อนไขการรับประกันและสิทธิประโยชน์โรงงาน</span>
-            </div>
-            <p class="services-terms-content">
-              จำหน่ายสินค้าในราคาผู้ผลิตจากโรงงาน รับประกันสินค้าเป็นเวลา 3 เดือน ให้เครดิตลูกค้าประมาณ 30 วัน พิจารณาตามความเหมาะสมหรือข้อตกลงร่วมกัน
-            </p>
-          </div>
-          <a href="#contact" class="btn-service-consult">
-            <span>ปรึกษาวิศวกรหรือสั่งผลิตตามแบบ</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </a>
         </div>
       </div>
     </div>
@@ -517,77 +613,102 @@
   <footer class="site-footer" id="contact-info">
     <div class="container">
       <div class="row">
-        <div class="col-md-5 col-xs-12 footer-info-block">
-          <div style="margin-bottom: 16px;">
-            <img src="assets/images/cropped-SPT-logo.png" alt="บริษัท ส.เพิ่มพูน ฮีตเทค จำกัด" style="height: 48px; width: auto; background: #ffffff; padding: 4px 8px; border-radius: 4px;">
+        <!-- Col 1: About Company -->
+        <div class="col-md-4 col-sm-6 col-xs-12 footer-col">
+          <div class="footer-logo-wrap">
+            <img src="assets/images/cropped-SPT-logo.png" alt="บริษัท ส.เพิ่มพูน ฮีตเทค จำกัด" class="footer-logo">
           </div>
-          <h3>บริษัท ส.เพิ่มพูน ฮีตเทค จำกัด</h3>
-          <p>ผู้ผลิตและจำหน่าย Heater, Thermocouple, Level Switch และตู้อบอุตสาหกรรมทุกชนิด ด้วยประสบการณ์ช่างผู้ชำนาญการมากกว่า 15 ปี พร้อมให้คำปรึกษาและบริการหลังการขายครบวงจร</p>
-          <p style="color: #94a3b8; font-size: 13px;">เวลาทำการ จันทร์ - เสาร์ เวลา 08.00 - 17.00 น.</p>
-        </div>
-
-        <div class="col-md-4 col-xs-12 footer-contacts">
-          <h4 style="color: #ffffff; font-size: 16px; margin-bottom: 14px; font-weight: 600;">ข้อมูลการติดต่อ</h4>
-          <p>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-              <circle cx="12" cy="10" r="3"></circle>
-            </svg>
-            <span>เลขที่ 26/231 ถนนเลียบคลองสอง แขวงบางชัน เขตคลองสามวา กรุงเทพมหานคร 10510</span>
+          <p class="footer-desc">
+            บริษัท ส.เพิ่มพูน ฮีตเทค จำกัด รับผลิตและจำหน่าย Heater, Thermocouple, RTD PT-100, Level Switch และตู้อบอุตสาหกรรม โดยทีมช่างวิศวกรผู้เชี่ยวชาญที่มีประสบการณ์ยาวนาน มุ่งมั่นส่งมอบสินค้าคุณภาพมาตรฐานสากล พร้อมบริการให้คำปรึกษาและบริการหลังการขายครบวงจร
           </p>
-          <p>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-            </svg>
-            <span>โทร. <a href="tel:0866604052">08-6660-4052</a>, <a href="tel:0864003676">08-6400-3676</a></span>
-          </p>
-          <p>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="6 9 6 2 18 2 18 9"></polyline>
-              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
-              <rect x="6" y="14" width="12" height="8"></rect>
-            </svg>
-            <span>โทรสาร 02-050-4481</span>
-          </p>
-          <p>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-              <polyline points="22,6 12,13 2,6"></polyline>
-            </svg>
-            <span>อีเมล <a href="mailto:Sales@permpoonheattech.com">Sales@permpoonheattech.com</a></span>
-          </p>
-          <p>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="2" y1="12" x2="22" y2="12"></line>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-            </svg>
-            <span>เว็บไซต์ www.permpoonheattech.com</span>
-          </p>
-        </div>
-
-        <div class="col-md-3 col-xs-12">
-          <h4 style="color: #ffffff; font-size: 16px; margin-bottom: 14px; font-weight: 600;">ช่องทางออนไลน์</h4>
-          <p style="font-size: 13px; color: #cbd5e1;">ติดต่อสอบถามข้อมูลด่วนผ่านไลน์และโซเชียลมีเดีย</p>
           <div class="footer-social-links">
-            <!-- Clean SVG LINE Icon -->
             <a href="https://line.me/ti/p/~@permpoonheattech" target="_blank" rel="noopener" class="social-btn" aria-label="LINE Official">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2C6.48 2 2 5.92 2 10.76c0 3.19 1.95 6 4.9 7.42-.21.75-.82 2.76-.94 3.18-.15.53.19.52.4.38.16-.11 2.29-1.57 3.23-2.22.78.11 1.58.17 2.41.17 5.52 0 10-3.92 10-8.75C22 5.92 17.52 2 12 2zm1 12.5h-2v-5h2v5zm4 0h-2v-5h2v5z"/>
               </svg>
             </a>
-            <!-- Clean SVG Facebook Icon -->
             <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
               </svg>
             </a>
-            <!-- Clean SVG YouTube Icon -->
             <a href="https://www.youtube.com/" target="_blank" rel="noopener" class="social-btn" aria-label="YouTube">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
               </svg>
             </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="col-md-2 col-sm-6 col-xs-12 footer-col">
+          <h4 class="footer-title">ลิงก์ด่วน</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#home">หน้าแรก</a></li>
+            <li><a href="products.html">หมวดหมู่สินค้า</a></li>
+            <li><a href="#services">บริการ</a></li>
+            <li><a href="index.html#about">เกี่ยวกับเรา</a></li>
+            <li><a href="index.html#contact">ติดต่อเรา</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Products -->
+        <div class="col-md-2 col-sm-6 col-xs-12 footer-col">
+          <h4 class="footer-title">กลุ่มผลิตภัณฑ์</h4>
+          <ul class="footer-links">
+            <li><a href="products.html?cat=sensor">หัววัดอุณหภูมิเทอร์โมคัปเปิล</a></li>
+            <li><a href="products.html?cat=heater">เซรามิคแบนด์ฮีตเตอร์</a></li>
+            <li><a href="products.html?cat=level-switch">ลูกลอยวัดระดับของเหลว</a></li>
+            <li><a href="products.html?cat=heater">ฮีตเตอร์ท่อกลมและฮีตเตอร์ครีบ</a></li>
+            <li><a href="products.html?cat=heater">ฮีตเตอร์อินฟราเรด</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact Info -->
+        <div class="col-md-4 col-sm-6 col-xs-12 footer-col">
+          <h4 class="footer-title">ติดต่อเรา</h4>
+          <div class="footer-contacts">
+            <p>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span><strong>สำนักงานใหญ่ :</strong> เลขที่ 26/231 ถนนเลียบคลองสอง แขวงบางชัน เขตคลองสามวา กรุงเทพมหานคร 10510</span>
+            </p>
+            <p>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 21h18M3 7v14M21 7v14M6 11h2M6 15h2M10 11h2M10 15h2M14 11h2M14 15h2M18 11h2M18 15h2M9 3l3-2 3 2v4H9V3z"/>
+              </svg>
+              <span><strong>โรงงาน :</strong> 15/29 ซอยคลองหกตะวันตก45 ตำบล คลองหก อำเภอคลองหลวง ปทุมธานี 12120</span>
+            </p>
+            <p>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              <span><strong>โทร :</strong> <a href="tel:0866604052">08-6660-4052</a>, <a href="tel:0864003676">08-6400-3676</a>, <a href="tel:0922712652">092-2712652</a></span>
+            </p>
+            <p>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                <rect x="6" y="14" width="12" height="8"></rect>
+              </svg>
+              <span><strong>โทรสาร :</strong> 02-050-4481</span>
+            </p>
+            <p>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span><strong>อีเมล :</strong> <a href="mailto:Sales@permpoonheattech.com">Sales@permpoonheattech.com</a>, <a href="mailto:suksawat@permpoonheattech.com">suksawat@permpoonheattech.com</a>, <a href="mailto:info@permpoonheattech.com">info@permpoonheattech.com</a></span>
+            </p>
+            <p>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span><strong>เวลาทำการ :</strong> จันทร์ - เสาร์ เวลา 08.00 - 17.00 น.</span>
+            </p>
           </div>
         </div>
       </div>
@@ -598,63 +719,50 @@
     </div>
   </footer>
 
-  <!-- 9. Floating Salesdesk / Contact Widget Button (Clean SVG) -->
-  <a href="javascript:void(0);" class="salesdesk-widget-btn-float" aria-label="สอบถามเพิ่มเติม">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-    </svg>
-    <span>สอบถามเพิ่มเติม</span>
-  </a>
+  <!-- 4. Interactive Product Detail Modal -->
+  <div class="product-modal-backdrop" id="productModal" aria-hidden="true">
+    <div class="product-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalProductTitle">
+      <button class="product-modal-close" id="closeProductModal" type="button" aria-label="ปิดหน้าต่าง">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="product-modal-body">
+        <div class="product-modal-gallery-wrap">
+          <div class="product-modal-slider-main">
+            <img id="modalProductImg" src="" alt="ภาพสินค้า">
+            <button type="button" class="modal-slider-btn prev" id="modalSliderPrev" aria-label="รูปก่อนหน้า">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <button type="button" class="modal-slider-btn next" id="modalSliderNext" aria-label="รูปถัดไป">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+            <div class="modal-slider-counter" id="modalSliderCounter">1 / 1</div>
+          </div>
+          <div class="product-modal-thumbnails" id="modalThumbnails">
+            <!-- Dynamic thumbnails -->
+          </div>
+        </div>
+        <div class="product-modal-info">
+          <h2 class="product-modal-title" id="modalProductTitle">ชื่อสินค้า</h2>
+          <h3 class="product-modal-subtitle" id="modalProductSubtitle">ชื่อผลิตภัณฑ์</h3>
+          <p class="product-modal-desc" id="modalProductDesc">คำอธิบายรายละเอียดผลิตภัณฑ์</p>
+          
+          <div class="product-modal-specs-wrap" id="modalProductSpecs">
+            <!-- Dynamic Specifications Table -->
+          </div>
 
-  <!-- Salesdesk Floating Popup Dialog (Clean SVG) -->
-  <div class="salesdesk-popup-dialog">
-    <div class="popup-header">
-      <h4>ติดต่อฝ่ายขาย ส.เพิ่มพูน ฮีตเทค</h4>
-      <button class="popup-close-btn" type="button" aria-label="Close">×</button>
-    </div>
-    <div class="popup-body">
-      <a href="tel:0866604052" class="quick-contact-option">
-        <span class="quick-contact-icon">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-          </svg>
-        </span>
-        <span>โทรด่วนสายตรง: 08-6660-4052</span>
-      </a>
-      <a href="tel:0864003676" class="quick-contact-option">
-        <span class="quick-contact-icon">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
-          </svg>
-        </span>
-        <span>โทรปรึกษาฝ่ายวิศวกรรม: 08-6400-3676</span>
-      </a>
-      <a href="https://line.me/ti/p/~@permpoonheattech" target="_blank" rel="noopener" class="quick-contact-option">
-        <span class="quick-contact-icon">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-          </svg>
-        </span>
-        <span>แชตสอบถามผ่าน LINE Official</span>
-      </a>
-      <a href="#contact" class="quick-contact-option">
-        <span class="quick-contact-icon">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-            <polyline points="14 2 14 8 20 8"></polyline>
-            <line x1="16" y1="13" x2="8" y2="13"></line>
-            <line x1="16" y1="17" x2="8" y2="17"></line>
-            <polyline points="10 9 9 9 8 9"></polyline>
-          </svg>
-        </span>
-        <span>กรอกแบบฟอร์มขอใบเสนอราคา</span>
-      </a>
+          <div class="product-modal-features-wrap" id="modalProductFeatures" style="display: none;">
+            <!-- Dynamic Key Features -->
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
   <!-- Scripts -->
   <script src="js/main.js"></script>
   <script src="js/form-validation.js"></script>
-  <script src="js/widget.js"></script>
 </body>
 </html>

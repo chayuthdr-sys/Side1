@@ -1,7 +1,12 @@
 {
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/หน้าแรก", "destination": "/index.html" },
-    { "source": "/บริการ", "destination": "/services.html" }
+    { "source": "/หน้าแรก", "destination": "/index.html" }
+  ],
+  "redirects": [
+    { "source": "/services.html", "destination": "/#services", "permanent": true },
+    { "source": "/services", "destination": "/#services", "permanent": true },
+    { "source": "/บริการ", "destination": "/#services", "permanent": true }
   ]
 }
+
