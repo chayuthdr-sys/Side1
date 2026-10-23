@@ -1047,6 +1047,35 @@
 }
 
 /* 5. Products Catalog Page & Filter Tabs */
+body.page-products .container,
+.products-page-section .container,
+.page-title-banner .container {
+  width: 95%;
+  max-width: 1480px;
+}
+
+@media (min-width: 1440px) {
+  body.page-products .container,
+  .products-page-section .container,
+  .page-title-banner .container {
+    width: 94%;
+    max-width: 1540px;
+  }
+}
+
+@media (min-width: 1680px) {
+  body.page-products .container,
+  .products-page-section .container,
+  .page-title-banner .container {
+    width: 92%;
+    max-width: 1620px;
+  }
+}
+
+body.page-products .product-info-wrap {
+  padding: 20px 18px;
+}
+
 .products-page-section {
   padding: 50px 0 80px;
   background-color: #f8fafc;
@@ -1106,23 +1135,23 @@
 .product-card-spec-box {
   background: #f8fafc;
   border-radius: 8px;
-  padding: 12px 14px;
+  padding: 11px 14px;
   margin: 0 0 14px 0;
   border: 1px solid #e2e8f0;
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  min-height: 116px;
+  min-height: 104px;
 }
 
 .product-card-spec-item {
   display: grid;
-  grid-template-columns: 105px 1fr;
+  grid-template-columns: 108px 1fr;
   column-gap: 8px;
   font-size: 12.5px;
   line-height: 1.5;
-  margin-bottom: 6px;
+  margin-bottom: 5px;
   align-items: baseline;
 }
 
@@ -1139,7 +1168,7 @@
 .product-card-spec-val {
   color: #0f172a;
   font-weight: 500;
-  word-break: break-word;
+  word-break: normal;
 }
 
 .product-tag-group {
