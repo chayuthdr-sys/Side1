@@ -79,6 +79,38 @@ function initHeroSlider() {
   if (sliderWrap) {
     sliderWrap.addEventListener('mouseenter', stopAutoPlay);
     sliderWrap.addEventListener('mouseleave', startAutoPlay);
+
+    // Touch Swipe Gesture Support for Mobile
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchEndX = 0;
+    let touchEndY = 0;
+
+    sliderWrap.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      touchStartY = e.changedTouches[0].screenY;
+      stopAutoPlay();
+    }, { passive: true });
+
+    sliderWrap.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      touchEndY = e.changedTouches[0].screenY;
+      handleSwipe();
+      startAutoPlay();
+    }, { passive: true });
+
+    function handleSwipe() {
+      const diffX = touchEndX - touchStartX;
+      const diffY = touchEndY - touchStartY;
+      // Trigger slide transition when horizontal swipe exceeds vertical movement and reaches threshold
+      if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 40) {
+        if (diffX < 0) {
+          nextSlide();
+        } else {
+          prevSlide();
+        }
+      }
+    }
   }
 
   startAutoPlay();

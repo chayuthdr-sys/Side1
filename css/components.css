@@ -1848,45 +1848,43 @@ body.modal-open {
 
 @media (max-width: 768px) {
   .hero-slider-container {
-    height: 440px;
+    height: 490px;
   }
   .hero-slide {
     background-size: cover;
     background-position: 68% center;
+    align-items: flex-start;
+    padding-top: 32px;
   }
   .hero-slide-overlay {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.82) 0%, rgba(255, 255, 255, 0.45) 42%, rgba(255, 255, 255, 0.12) 80%, transparent 100%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, rgba(255, 255, 255, 0.55) 45%, rgba(255, 255, 255, 0.15) 80%, transparent 100%);
   }
   .hero-slide-content {
     padding: 0 16px;
     max-width: 100%;
-    margin-top: -24px;
+    margin-top: 0;
   }
   .hero-slide-content .btn-read-more {
     display: none !important;
   }
   .hero-title {
     font-size: 24px;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     text-shadow: 0 1px 3px rgba(255, 255, 255, 0.95), 0 0 16px #ffffff;
   }
   .hero-subtitle {
-    font-size: 13px;
-    line-height: 1.5;
+    font-size: 13.5px;
+    line-height: 1.6;
     color: #1e293b;
     margin-bottom: 0;
     text-shadow: 0 1px 3px rgba(255, 255, 255, 0.95), 0 0 12px #ffffff;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+    display: block;
+    overflow: visible;
   }
+  .slider-controls,
   .slider-arrow {
-    width: 36px;
-    height: 36px;
+    display: none !important;
   }
-  .slider-arrow.prev { left: 6px; }
-  .slider-arrow.next { right: 6px; }
   .product-modal-body {
     grid-template-columns: 1fr;
     padding: 20px 16px;
