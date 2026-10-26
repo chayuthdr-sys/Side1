@@ -180,7 +180,7 @@ function initNavigation() {
     });
   });
 
-  // Smooth scrolling for anchor links
+  // Smooth scrolling for anchor links with dynamic header offset
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const targetId = this.getAttribute('href');
@@ -188,10 +188,14 @@ function initNavigation() {
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
           e.preventDefault();
-          targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
           if (nav && nav.classList.contains('is-open')) {
             nav.classList.remove('is-open');
           }
+          const header = document.querySelector('.site-header');
+          const headerHeight = header ? header.offsetHeight : 76;
+          const extraGap = 16;
+          const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - (headerHeight + extraGap);
+          window.scrollTo({ top: Math.max(0, targetPosition), behavior: 'smooth' });
         }
       }
     });

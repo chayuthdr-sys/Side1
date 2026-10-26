@@ -412,6 +412,24 @@ a:hover, a:focus {
   gap: 6px;
 }
 
+#about,
+#services,
+#contact,
+.company-highlight-section,
+.quote-form-section {
+  scroll-margin-top: 105px;
+}
+
+@media (max-width: 991px) {
+  #about,
+  #services,
+  #contact,
+  .company-highlight-section,
+  .quote-form-section {
+    scroll-margin-top: 92px;
+  }
+}
+
 .company-about-title {
   font-size: 28px;
   font-weight: 700;
@@ -423,6 +441,31 @@ a:hover, a:focus {
 .company-about-title strong {
   font-weight: 700;
   color: #1F3864;
+}
+
+@media (max-width: 768px) {
+  .company-about-title {
+    font-size: 24px;
+    line-height: 1.35;
+    margin-bottom: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .company-about-title {
+    font-size: 21.5px;
+    line-height: 1.35;
+    letter-spacing: -0.3px;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 360px) {
+  .company-about-title {
+    font-size: 19.5px;
+    letter-spacing: -0.4px;
+    white-space: nowrap;
+  }
 }
 
 .company-about-desc {
