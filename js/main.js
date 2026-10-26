@@ -92,6 +92,21 @@ function initHeroSlider() {
       stopAutoPlay();
     }, { passive: true });
 
+    sliderWrap.addEventListener('touchmove', (e) => {
+      if (!e.touches || !e.touches[0]) return;
+      const currentX = e.touches[0].screenX;
+      const currentY = e.touches[0].screenY;
+      const diffX = currentX - touchStartX;
+      const diffY = currentY - touchStartY;
+
+      // When horizontal swipe exceeds vertical movement, prevent browser history back/forward gesture
+      if (Math.abs(diffX) > Math.abs(diffY)) {
+        if (e.cancelable) {
+          e.preventDefault();
+        }
+      }
+    }, { passive: false });
+
     sliderWrap.addEventListener('touchend', (e) => {
       touchEndX = e.changedTouches[0].screenX;
       touchEndY = e.changedTouches[0].screenY;
